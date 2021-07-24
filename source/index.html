@@ -5,46 +5,48 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body class="page-body">
-    <header class="header">
-      <a class="header__logo logo">
+    <header class="page-header">
+      <a class="page-header__logo">
         <img src="img/logo/mishka-logo-mobile.svg" alt="Логотип" width="86" height="35">
       </a>
-      <button class="header__button open-button" type="button">Меню</button>
-      <nav class="header__nav">
-        <ul class="header__list">
-          <li class="header__item">
-            <a class="header__link" href="#">Каталог товаров</a>
+      <nav class="main-nav">
+        <button class="main-nav__dropdown" type="button"><span class="visually-hidden">Открыть Меню</span></button>
+        <ul class="main-nav__list main-nav__wrapper site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Каталог товаров</a>
           </li>
-          <li class="header__item">
-            <a class="header__link" href="#">Вязание на заказ</a>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Вязание на заказ</a>
           </li>
-          <li class="header__item">
-            <a class="header__link" href="#">Поиск по сайту</a>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">
+              <span class="visually-hidden">Поиск по сайту</span>
+            </a>
           </li>
-          <li class="header__item">
-            <a class="header__link" href="#">Корзина: пока пуста</a>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Корзина: пока пуста</a>
           </li>
-          <li class="header__item">
-            <a class="header__link" href="#">Новые поступления</a>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Новые поступления</a>
           </li>
-          <li class="header__item">
-            <a class="header__link" href="#">Распродажа</a>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Распродажа</a>
           </li>
-          <li class="header__item">
-            <a class="header__link" href="#">Бесплатная доставка по России</a>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Бесплатная доставка по России</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main class="main">
+    <main class="page-main">
       <h1 class="visually-hidden">Интернет магазин Мишка. Милые штучки ручной работы для дома</h1>
-      <section class="promo">
+      <section class="promo promo__wrapper">
         <h2 class="promo__title">Милые штуки ручной работы для дома</h2>
         <img src="img/index/promo/promo-mobile.jpg" alt="Деревянная полочка в виде домика в 3 яруса. На полоках лежат мягкие игрушки, кот и мишка, а так же вязанные карзинки" width="320" height="373">
         <a href="#" class="promo__link promo__link--interior">Предметы интерьера</a>
         <a href="#" class="promo__link promo__link--toy">Детские игрушки</a>
       </section>
-      <section class="featured">
+      <section class="featured featured__wrapper">
         <h2 class="featured__title">Вязаные корзинки</h2>
         <p class="featured__subtitle">ТОВАР НЕДЕЛИ</p>
         <p class="featured__description">
