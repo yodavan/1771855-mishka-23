@@ -42,9 +42,13 @@
       <h1 class="visually-hidden">Интернет магазин Мишка. Милые штучки ручной работы для дома</h1>
       <section class="promo promo__wrapper">
         <h2 class="promo__title">Милые штуки ручной работы для дома</h2>
-        <img src="img/index/promo/promo-mobile.jpg" alt="Деревянная полочка в виде домика в 3 яруса. На полоках лежат мягкие игрушки, кот и мишка, а так же вязанные карзинки" width="320" height="373">
-        <a href="#" class="promo__link promo__link--interior">Предметы интерьера</a>
-        <a href="#" class="promo__link promo__link--toy">Детские игрушки</a>
+        <div class="promo__image">
+          <img src="img/index/promo/promo-mobile.jpg" alt="Деревянная полочка в виде домика в 3 яруса. На полках лежат мягкие игрушки, кот и мишка, а так же вязанные карзинки" width="320" height="373">
+        </div>
+        <div class="promo__link-inner">
+          <a href="#" class="promo__link promo__link--interior">Предметы интерьера</a>
+          <a href="#" class="promo__link promo__link--toy">Детские игрушки</a>
+        </div>
       </section>
       <section class="featured featured__wrapper">
         <h2 class="featured__title">Вязаные корзинки</h2>
@@ -53,25 +57,95 @@
           Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.
         </p>
         <dl class="featured__list">
-          <dt class="featured__name">Цвет:</dt>
-          <dd class="featured__text">«Тиффани»/серый</dd>
-          <dt class="featured__name">Диаметр:</dt>
-          <dd class="featured__text">25 см</dd>
-          <dt class="featured__name">Высота:</dt>
-          <dd class="featured__text">15 см</dd>
+          <div class="featured__item">
+            <dt class="featured__name">Цвет:</dt>
+            <dd class="featured__text">«Тиффани»/серый</dd>
+          </div>
+          <div class="featured__item">
+            <dt class="featured__name">Диаметр:</dt>
+            <dd class="featured__text">25 см</dd>
+          </div>
+          <div class="featured__item">
+            <dt class="featured__name">Высота:</dt>
+            <dd class="featured__text">15 см</dd>
+          </div>
         </dl>
+        <div class="featured__image">
+          <img src="img/index/featured/triple-mobile.jpg" alt="Вязанные корзинки ручной работы" width="260" height="315">
+        </div>
         <p class="featured__price">Цена: 990 руб.</p>
-        <a href="#" class="featured__button button">ЗАКАЗАТЬ</a>
+        <a href="#" class="featured__button button-item">ЗАКАЗАТЬ</a>
       </section>
-      <section class="about">
+      <section class="about about__wrapper">
         <h2 class="about__title">Коротко о нас:</h2>
+        <ul class="about__advantages-list advantages-list">
+          <li class="advantages-list__item advantages-list__item--ecology">
+            <p class="advantages-list__text">Экологически<br> чистые материалы</p>
+          </li>
+          <li class="advantages-list__item advantages-list__item--scandinavian">
+            <p class="advantages-list__text">Скандинавский стиль<br> по российской цене</p>
+          </li>
+          <li class="advantages-list__item advantages-list__item--like">
+            <p class="advantages-list__text">Увеличивает лайки<br> на фотографиях</p>
+          </li>
+          <li class="advantages-list__item advantages-list__item--hand-made">
+            <p class="advantages-list__text">Связано вручную<br> с любовью и умилением</p>
+          </li>
+          <li class="advantages-list__item advantages-list__item--support">
+            <p class="advantages-list__text">Поддержка отечественного<br> производителя</p>
+          </li>
+          <li class="advantages-list__item advantages-list__item--box-gift">
+            <p class="advantages-list__text">Поставляется<br> в подарочной упаковке</p>
+          </li>
+        </ul>
       </section>
-      <section class="reviews">
+      <section class="reviews reviews__wrapper">
         <h2 class="reviews__title">Отзывы</h2>
+        <div class="reviews__list">
+          <blockquote class="reviews__item">
+            <p class="reviews__text">
+              Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек.
+              В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+            </p>
+            <cite class="reviews__cite cite">Анастасия Красильникова<br><span class="cite__adres-name">@misssssiskras</span></cite>
+          </blockquote>
+        </div>
+        <p class="reviews__toggles">
+          <button class="slider__toggle toggle-left" type="button" aria-label="В лево">
+            <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 11H7.7L15.8 2.8L13 0L0 13L13 26L15.8 23.2L7.7 15H50V11Z" fill="black"/>
+            </svg>
+          </button>
+          <button class="slider__toggle toggle-right" type="button" aria-label="В право">
+            <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 11H42.3L34.2 2.8L37 0L50 13L37 26L34.2 23.2L42.3 15H0V11Z" fill="black"/>
+            </svg>
+          </button>
+        </p>
+        <a class="reviews__button button" href="#">Написать</a>
       </section>
-      <section class="contacts">
+      <section class="contacts contacts__wrapper">
         <h2 class="contacts__title">Контакты</h2>
+        <dl class="contacts__list">
+          <div class="contacts__item">
+            <dt class="contacts__name">e-mail:</dt>
+            <dd class="contacts__text">
+              <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </dd>
+          </div>
+          <div class="contacts__item">
+            <dt class="contacts__name">адрес:</dt>
+            <dd class="contacts__text">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</dd>
+          </div>
+        </dl>
+        <div class="contacts__map">
+          <img src="img/index/contacts/map-mobile.jpg" alt="Карта расположения магазина" width="320" height="455">
+        </div>
+        <a href="#" class="contacts__button button">Нaпишите нам</a>
       </section>
     </main>
+    <footer class="page-footer">
+
+    </footer>
   </body>
 </html>
