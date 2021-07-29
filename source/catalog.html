@@ -2,19 +2,19 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Интернет Магазин: Мишка</title>
+    <title>Каталог товаров | Мишка</title>
   </head>
   <body class="page-body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo">
+        <a class="page-header__logo" href="index.html" aria-label="Переход на главную">
           <img src="img/logo/mishka-logo-mobile.svg" alt="Логотип" width="86" height="35">
         </a>
         <nav class="main-nav">
           <button class="main-nav__dropdown" type="button"><span class="visually-hidden">Открыть Меню</span></button>
           <ul class="main-nav__list main-nav__wrapper site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__link" href="#">Каталог товаров</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="form.html">Вязание на заказ</a>
@@ -55,120 +55,86 @@
       </div>
     </header>
     <main class="page-main">
-      <section class="main-products">
-        <div class="main-products__wrapper">
-          <h1 class="main-products__title-bold">Милые штуки ручной работы для дома</h1>
-          <div class="main-products__image">
-            <img src="img/index/main-products/main-products_mobile.jpg" alt="Деревянная полочка в виде домика в 3 яруса. На полках лежат мягкие игрушки, кот и мишка, а так же вязанные карзинки" width="320" height="373">
-          </div>
-          <div class="main-products__categories-inner">
-            <a class="main-products__categories main-products__categories--interior" href="#">Предметы интерьера</a>
-            <a class="main-products__categories main-products__categories--toy" href="#">Детские игрушки</a>
-          </div>
+      <section class="intro">
+        <div class="intro__wrapper-color">
+          <h1 class="intro__title-bold">Каталог товаров</h1>
         </div>
       </section>
-      <section class="promo">
-        <div class="promo__wrapper">
-          <h2 class="promo__title">Вязаные корзинки</h2>
-          <p class="promo__subtitle">Товар Недели</p>
-          <p class="promo__description">
-            Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.
-          </p>
-          <dl class="promo__list">
-            <div class="promo__item">
-              <dt class="promo__name">Цвет:</dt>
-              <dd class="promo__value">«Тиффани»/серый</dd>
-            </div>
-            <div class="promo__item">
-              <dt class="promo__name">Диаметр:</dt>
-              <dd class="promo__value">25 см</dd>
-            </div>
-            <div class="promo__item">
-              <dt class="promo__name">Высота:</dt>
-              <dd class="promo__value">15 см</dd>
-            </div>
-          </dl>
-          <div class="promo__image">
-            <img src="img/index/promo/triple-mobile.jpg" alt="Вязанные корзинки ручной работы" width="260" height="315">
-          </div>
-          <p class="promo__price">Цена: 990 руб.</p>
-          <a class="promo__button-link button-link" href="#">Заказать</a>
-        </div>
-      </section>
-      <section class="about">
-        <div class="about__wrapper">
-          <h2 class="about__title">Коротко о нас:</h2>
-          <ul class="about__advantages-list advantages-list">
-            <li class="advantages-list__item advantages-list__item--ecology">
-              <p class="advantages-list__text">Экологически чистые материалы</p>
+      <section class="catalog">
+        <div class="catalog__wrapper">
+          <h2 class="visually-hidden">Каталог милых штучек ручной работы для дома</h2>
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">
+                <article class="catalog__product product">
+                  <div class="product__image-wrapper">
+                    <img src="img/catalog/bunny-mobile.jpg" alt="Мягкая игрушка зайчик. Цвет головы: серый. Цвет одежки и лапок: голубой" width="260" height="195">
+                  </div>
+                  <div class="product__details-wrapper">
+                    <h3 class="product__title">Зайчик-попрыгайчик</h3>
+                    <p class="product__text">Рост 30 см, вес 200 г</p>
+                    <p class="product__price">1 200 руб.</p>
+                  </div>
+                </article>
+              </a>
             </li>
-            <li class="advantages-list__item advantages-list__item--style">
-              <p class="advantages-list__text">Скандинавский стиль по российской цене</p>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">
+                <article class="catalog__product product">
+                  <div class="product__image-wrapper">
+                    <img src="img/catalog/photo-2-mobile.jpg" alt="Корзинка вязанная крючком двухцветная, снизу до середины розовый, а потом белый" width="260" height="195">
+                  </div>
+                  <div class="product__details-wrapper">
+                    <h3 class="product__title">Корзинка для белья</h3>
+                    <p class="product__text">Диаметр 15 см, высота 10 см</p>
+                    <p class="product__price">690 руб.</p>
+                  </div>
+                </article>
+              </a>
             </li>
-            <li class="advantages-list__item advantages-list__item--like">
-              <p class="advantages-list__text">Увеличивает лайки на фотографиях</p>
-            </li>
-            <li class="advantages-list__item advantages-list__item--hand-made">
-              <p class="advantages-list__text">Связано вручную с любовью и умилением</p>
-            </li>
-            <li class="advantages-list__item advantages-list__item--support">
-              <p class="advantages-list__text">Поддержка отечественного производителя</p>
-            </li>
-            <li class="advantages-list__item advantages-list__item--box-gift">
-              <p class="advantages-list__text">Поставляется в подарочной упаковке</p>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">
+                <article class="catalog__product product">
+                  <div class="product__image-wrapper">
+                    <img src="img/catalog/photo-3-mobile.jpg" alt="Большая корзинка вязанная крючком двухцветная, снизу до середины салатовый, а потом белый" width="260" height="195">
+                  </div>
+                  <div class="product__details-wrapper">
+                    <h3 class="product__title">Большая корзинка для игрушек</h3>
+                    <p class="product__text">Диаметр 30 см, высота 30 см</p>
+                    <p class="product__price">1 500 руб.</p>
+                  </div>
+                </article>
+              </a>
             </li>
           </ul>
         </div>
       </section>
-      <section class="reviews slider">
-        <div class="reviews__wrapper">
-          <h2 class="reviews__title">Отзывы</h2>
-          <div class="reviews__list slider__list">
-            <blockquote class="reviews__item slider__item">
-              <p class="reviews__text">
-                Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек.
-                В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-              </p>
-              <cite class="reviews__cite">Анастасия Красильникова</cite>
-              <span class="reviews__nick-name">@misssssiskras</span>
-            </blockquote>
-          </div>
-          <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle toggle-left" type="button" aria-label="Предыдущий слайд">
-              <img src="img/index/reviews/huge-left.svg" alt="Стрелка в лево" width="50" height="26">
-            </button>
-            <button class="slider__toggle toggle-right" type="button" aria-label="Следующий слайд">
-              <img src="img/index/reviews/huge-right.svg" alt="Стрелка в право" width="50" height="26">
-            </button>
-          </p>
-          <a class="reviews__button-link button-link" href="#">Написать</a>
-        </div>
-      </section>
-      <section class="contacts">
-        <div class="contacts__wrapper">
-          <h2 class="contacts__title">Контакты</h2>
-          <dl class="contacts__list">
-            <div class="contacts__item">
-              <dt class="contacts__name">e-mail:</dt>
-              <dd class="contacts__value">
-                <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-              </dd>
-            </div>
-            <div class="contacts__item">
-              <dt class="contacts__name">адрес:</dt>
-              <dd class="contacts__value">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</dd>
-            </div>
-          </dl>
-          <div class="contacts__map">
-            <img src="img/index/contacts/map-mobile.jpg" alt="Карта расположения магазина" width="320" height="455">
-          </div>
-          <a class="contacts__button-link button-link" href="#">Нaпишите нам</a>
+      <section class="production">
+        <div class="production__wrapper">
+          <h2 class="visually-hidden">Как все производится</h2>
+          <ul class="production__list">
+            <li class="production__item">
+              <article class="production__product-video product-video">
+                <h3 class="product-video__title">Процесс производства</h3>
+                <div class="product-video__clip-wrapper">
+                  <img src="img/catalog/video-mobile.jpg" alt="Двух цветная корзинка вязанная крючком. С низу до середины цвет серый, потом зеленый" width="260" height="150">
+                  <button type="button">Смотреть видео</button>
+                </div>
+                <div class="product-video__column-wrapper">
+                  <p class="product-video__text">
+                    По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+                  </p>
+                  <a class="product-video__button-link button-link" href="#">Сделать заказ</a>
+                </div>
+              </article>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__logo" href="#">
+        <a class="page-footer__logo" href="index.html" aria-label="Переход на главную">
           <svg width="102" height="34" viewBox="0 0 102 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M19.2204 21.3813C19.1204 18.6962 18.7204 16.1105 18.7204 13.4255C18.7204 11.2376 19.1204 9.04976 18.3204 6.96135C18.3204 6.76246 18.4204 6.46411 18.4204 6.26522C18.6204 5.27074 15.1204 5.76798 14.6204 6.76246C14.3204 7.0608 14.1204 7.35914 14.2204 7.75694C14.2204 7.85638 14.3204 7.95583 14.3204 8.05528C13.6204 11.2376 12.7204 14.3205 11.7204 17.4034C11.3204 18.5967 10.8204 19.6907 10.4204 20.884C9.82041 19.7901 9.22041 18.6962 8.82041 17.5028C7.42041 14.1216 6.22041 10.6409 4.52041 7.35914C4.72041 5.86743 1.32041 5.96688 0.620408 7.35914C-0.179592 9.04976 -0.0795918 10.7404 0.220408 12.5304C0.520408 14.5194 0.620408 16.5083 0.620408 18.5967C0.620408 22.5746 1.02041 26.4531 1.02041 30.431C0.620408 30.8288 0.520408 31.326 0.920408 31.8233C1.12041 32.0222 1.32041 32.2211 1.52041 32.3205C2.52041 33.0167 5.12041 32.42 5.12041 31.0277C5.12041 26.9503 4.82041 22.873 4.72041 18.6962C4.72041 18.2984 4.72041 17.9006 4.72041 17.5028C4.82041 17.6023 4.82041 17.8012 4.92041 17.9006C5.52041 19.4918 6.22041 21.0829 7.12041 22.5746C8.02041 24.0664 8.42041 25.6575 8.92041 27.2487C8.72041 27.4476 8.62041 27.7459 8.72041 27.9448C8.72041 28.1437 8.82041 28.2432 9.02041 28.3426C9.62041 28.8399 10.8204 28.641 11.5204 28.3426C11.8204 28.2432 12.1204 28.0443 12.3204 27.9448C12.6204 27.7459 13.2204 27.2487 13.0204 26.7514C13.0204 26.652 12.9204 26.5526 12.9204 26.4531C13.4204 25.1603 13.6204 23.8675 13.9204 22.5746C14.2204 21.1824 14.7204 19.7901 15.2204 18.4973C15.3204 19.094 15.3204 19.6907 15.4204 20.3868C15.6204 22.9724 15.4204 25.4586 15.4204 27.9448C15.4204 28.7404 15.5204 29.536 15.6204 30.431C15.7204 30.7294 16.0204 32.2211 15.9204 32.3205C15.1204 32.8178 15.3204 33.4144 16.1204 33.6133C17.0204 33.8122 18.2204 33.5139 18.9204 32.9172C20.1204 31.8233 19.5204 30.1327 19.3204 28.7404C18.8204 26.3537 19.3204 23.768 19.2204 21.3813Z" fill="black"/>
             <path d="M27.6201 22.0776C27.5201 20.0887 26.8201 18.1992 26.8201 16.2102C26.8201 13.9229 27.0201 11.6356 26.6201 9.34833C26.5201 8.65219 22.5201 9.44778 22.7201 10.3428C23.0201 12.4312 22.9201 14.5196 22.9201 16.7075C22.9201 18.6964 23.4201 20.5859 23.6201 22.5749C23.9201 24.6633 23.5201 26.7517 23.7201 28.7406C23.8201 29.7351 24.5201 31.4257 23.8201 32.3208C23.4201 32.818 25.3201 32.6191 25.4201 32.6191C26.2201 32.5196 27.2201 32.2213 27.7201 31.6246C28.4201 30.829 27.9201 29.2379 27.8201 28.2434C27.5201 26.2544 27.7201 24.0666 27.6201 22.0776Z" fill="black"/>
