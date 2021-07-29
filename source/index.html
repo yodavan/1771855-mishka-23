@@ -22,7 +22,7 @@
           </ul>
           <ul class="main-nav__list main-nav__wrapper user-list">
             <li class="user-list__item">
-              <form class="user-list__search-site search-site" action="https://echo.htmlacademy.ru" method="POST">
+              <form class="user-list__search-site search-site" action="https://echo.htmlacademy.ru" method="GET">
                 <label class="search-site__label visually-hidden" for="search_form_site">Найдется все</label>
                 <input class="search-site__input visually-hidden" type="text" name="search_form_site" id="search_form_site" placeholder="Поиск по сайту">
                 <button class="search-site__button" type="submit">
@@ -55,49 +55,44 @@
       </div>
     </header>
     <main class="page-main">
-      <section class="intro">
-        <div class="intro__wrapper">
-          <h1 class="intro__title-bold">Милые штуки ручной работы для дома</h1>
+      <section class="main-products">
+        <div class="main-products__wrapper">
+          <h1 class="main-products__title-bold">Милые штуки ручной работы для дома</h1>
+          <div class="main-products__image">
+            <img src="img/index/main-products/main-products_mobile.jpg" alt="Деревянная полочка в виде домика в 3 яруса. На полках лежат мягкие игрушки, кот и мишка, а так же вязанные карзинки" width="320" height="373">
+          </div>
+          <div class="main-products__categories-inner">
+            <a class="main-products__categories main-products__categories--interior" href="#">Предметы интерьера</a>
+            <a class="main-products__categories main-products__categories--toy" href="#">Детские игрушки</a>
+          </div>
         </div>
       </section>
       <section class="promo">
         <div class="promo__wrapper">
-          <h2 class="visually-hidden">Все делаем своими руками</h2>
-          <div class="promo__image">
-            <img src="img/index/promo/promo-mobile.jpg" alt="Деревянная полочка в виде домика в 3 яруса. На полках лежат мягкие игрушки, кот и мишка, а так же вязанные карзинки" width="320" height="373">
-          </div>
-          <div class="promo__link-inner">
-            <a class="promo__link promo__link--interior" href="#">Предметы интерьера</a>
-            <a class="promo__link promo__link--toy" href="#">Детские игрушки</a>
-          </div>
-        </div>
-      </section>
-      <section class="featured">
-        <div class="featured__wrapper">
-          <h2 class="featured__title">Вязаные корзинки</h2>
-          <p class="featured__subtitle">ТОВАР НЕДЕЛИ</p>
-          <p class="featured__description">
+          <h2 class="promo__title">Вязаные корзинки</h2>
+          <p class="promo__subtitle">Товар Недели</p>
+          <p class="promo__description">
             Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.
           </p>
-          <dl class="featured__list">
-            <div class="featured__item">
-              <dt class="featured__name">Цвет:</dt>
-              <dd class="featured__text">«Тиффани»/серый</dd>
+          <dl class="promo__list">
+            <div class="promo__item">
+              <dt class="promo__name">Цвет:</dt>
+              <dd class="promo__value">«Тиффани»/серый</dd>
             </div>
-            <div class="featured__item">
-              <dt class="featured__name">Диаметр:</dt>
-              <dd class="featured__text">25 см</dd>
+            <div class="promo__item">
+              <dt class="promo__name">Диаметр:</dt>
+              <dd class="promo__value">25 см</dd>
             </div>
-            <div class="featured__item">
-              <dt class="featured__name">Высота:</dt>
-              <dd class="featured__text">15 см</dd>
+            <div class="promo__item">
+              <dt class="promo__name">Высота:</dt>
+              <dd class="promo__value">15 см</dd>
             </div>
           </dl>
-          <div class="featured__image">
-            <img src="img/index/featured/triple-mobile.jpg" alt="Вязанные корзинки ручной работы" width="260" height="315">
+          <div class="promo__image">
+            <img src="img/index/promo/triple-mobile.jpg" alt="Вязанные корзинки ручной работы" width="260" height="315">
           </div>
-          <p class="featured__price">Цена: 990 руб.</p>
-          <a class="featured__button-link button-link" href="#">ЗАКАЗАТЬ</a>
+          <p class="promo__price">Цена: 990 руб.</p>
+          <a class="promo__button-link button-link" href="#">Заказать</a>
         </div>
       </section>
       <section class="about">
@@ -105,22 +100,22 @@
           <h2 class="about__title">Коротко о нас:</h2>
           <ul class="about__advantages-list advantages-list">
             <li class="advantages-list__item advantages-list__item--ecology">
-              <p class="advantages-list__text">Экологически<br> чистые материалы</p>
+              <p class="advantages-list__text">Экологически чистые материалы</p>
             </li>
             <li class="advantages-list__item advantages-list__item--style">
-              <p class="advantages-list__text">Скандинавский стиль<br> по российской цене</p>
+              <p class="advantages-list__text">Скандинавский стиль по российской цене</p>
             </li>
             <li class="advantages-list__item advantages-list__item--like">
-              <p class="advantages-list__text">Увеличивает лайки<br> на фотографиях</p>
+              <p class="advantages-list__text">Увеличивает лайки на фотографиях</p>
             </li>
             <li class="advantages-list__item advantages-list__item--hand-made">
-              <p class="advantages-list__text">Связано вручную<br> с любовью и умилением</p>
+              <p class="advantages-list__text">Связано вручную с любовью и умилением</p>
             </li>
             <li class="advantages-list__item advantages-list__item--support">
-              <p class="advantages-list__text">Поддержка отечественного<br> производителя</p>
+              <p class="advantages-list__text">Поддержка отечественного производителя</p>
             </li>
             <li class="advantages-list__item advantages-list__item--box-gift">
-              <p class="advantages-list__text">Поставляется<br> в подарочной упаковке</p>
+              <p class="advantages-list__text">Поставляется в подарочной упаковке</p>
             </li>
           </ul>
         </div>
@@ -155,13 +150,13 @@
           <dl class="contacts__list">
             <div class="contacts__item">
               <dt class="contacts__name">e-mail:</dt>
-              <dd class="contacts__text">
+              <dd class="contacts__value">
                 <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
               </dd>
             </div>
             <div class="contacts__item">
               <dt class="contacts__name">адрес:</dt>
-              <dd class="contacts__text">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</dd>
+              <dd class="contacts__value">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</dd>
             </div>
           </dl>
           <div class="contacts__map">
