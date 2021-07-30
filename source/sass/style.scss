@@ -1,1 +1,16 @@
-// Начните писать стили здесь
+// Global
+@import "global/normalize";
+@import "global/fonts.scss";
+@import "global/global.scss";
+@import "global/variables.scss";
+
+//Utils
+@import "utils/visually-hidden.scss";
+@import "utils/templates.scss";
+
+//Blocks
+@import "blocks/page-body.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/modal.scss";

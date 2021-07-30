@@ -1,0 +1,30 @@
+.page-footer {
+  background-color: $w-gray;
+
+  &__wrapper {
+    width: 100%;
+    min-height: 160px;
+  }
+
+  &__logo {
+    display: none;
+  }
+
+  &__list {
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    @extend %m-p-nul;
+  }
+
+  &__developer {
+    display: flex;
+    justify-content: center;
+    min-height: 80px;
+    @extend %m-p-nul;
+  }
+
+  &__link {
+    margin-left: 27px;
+  }
+}

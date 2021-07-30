@@ -1,0 +1,23 @@
+.page-header {
+  color: $black;
+  margin: 0 auto;
+  position: relative;
+}
+
+.page-header__wrapper {
+  width: 100%;
+  min-height: 79px;
+}
+
+.page-header__logo {
+  position: absolute;
+  left: 50%;
+  top: 22px;
+  width: 86px;
+  height: 35px;
+  margin-left: -43px;
+}
+
+.page-header__text {
+  display: none;
+}
