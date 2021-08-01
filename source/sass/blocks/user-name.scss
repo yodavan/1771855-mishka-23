@@ -1,0 +1,28 @@
+.user-name {
+  padding: 0;
+  margin: 0;
+
+  .user-name__item {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 21px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &:first-of-type {
+      margin-top: 29px;
+    }
+  }
+
+  .user-name__input {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 51px;
+    border: none;
+    border-bottom: 1px solid $black;
+  }
+}
