@@ -1,0 +1,10 @@
+.button-link {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  color: $g-black;
+  border: 2px solid $g-black;
+  min-height: 48px;
+  text-transform: uppercase;
+}

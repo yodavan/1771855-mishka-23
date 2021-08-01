@@ -1,30 +1,29 @@
 .page-footer {
   background-color: $w-gray;
 
-  &__wrapper {
+  .page-footer__wrapper {
     width: 100%;
     min-height: 160px;
   }
 
-  &__logo {
+  .page-footer__logo {
     display: none;
   }
 
-  &__list {
+  .page-footer__list {
     min-height: 80px;
-    display: flex;
-    justify-content: center;
-    @extend %m-p-nul;
   }
 
-  &__developer {
+  .page-footer__developer {
     display: flex;
     justify-content: center;
+    align-items: center;
     min-height: 80px;
-    @extend %m-p-nul;
+    margin: 0;
+    padding: 0;
   }
 
-  &__link {
+  .page-footer__link {
     margin-left: 27px;
   }
 }
