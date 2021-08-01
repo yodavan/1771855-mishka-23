@@ -9,7 +9,8 @@
 
   .main-products__title-bold {
     position: absolute;
-    @extend %m-p-nul;
+    margin: 0;
+    padding: 0;
     color: $black;
     top: 15%;
     left: 50%;
