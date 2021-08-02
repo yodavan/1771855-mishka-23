@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     margin-bottom: 29px;
+    @include font-face(400, 13px, 24px);
   }
 
   .form__search {
@@ -12,6 +13,7 @@
     margin: 0;
     border: none;
     border-top: 1px solid $n-green;
+    @include font-face(700, 17px, 18px);
   }
 
   .form__search--wrapper {
@@ -26,8 +28,14 @@
       padding: 0;
       margin: 0;
       margin-top: 22px;
-      min-width: 100%;
+      width: 100%;
       min-height: 140px;
+      @include font-face(400, 17px, 18px);
+      font-family: "opensans", "Arial", sans-serif;
+    }
+
+    & textarea::placeholder {
+      padding: 17px;
     }
   }
 
@@ -43,6 +51,8 @@
     min-height: 51px;
     border: none;
     border-bottom: 1px solid $black;
+    @include font-face(400, 17px, 18px);
+    font-family: "opensans", "Arial", sans-serif;
   }
 
   .form__input-mail {
@@ -52,17 +62,22 @@
     min-height: 51px;
     border: none;
     border-bottom: 1px solid $black;
+    @include font-face(400, 17px, 18px);
+    font-family: "opensans", "Arial", sans-serif;
   }
 
   .form__small-text {
     padding: 0;
     margin: 0;
     margin-bottom: 30px;
+    @include font-face(400, 14px, 16px);
+    color: $g-black;
   }
 
   .form__button-link {
     padding: 0;
     margin: 0;
     width: 100%;
+    @include font-face(700, 17px, 16px);
   }
 }

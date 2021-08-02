@@ -13,6 +13,7 @@
     padding: 0;
     margin: 0;
     margin-bottom: 3px;
+    @include font-face(700, 25px, 30px);
   }
 
   .promo__subtitle {
@@ -20,18 +21,22 @@
     margin: 0;
     color: $l-green;
     margin-bottom: 17px;
+    @include font-face(700, 17px, 20px);
+    text-transform: uppercase;
   }
 
   .promo__description {
     padding: 0;
     margin: 0;
     margin-bottom: 28px;
+    @include font-face(400, 15px, 24px);
   }
 
   .promo__list {
     padding: 0;
     margin: 0;
     margin-bottom: 28px;
+    @include font-face(400, 15px, 20px);
   }
 
   .promo__item {
@@ -62,9 +67,11 @@
     padding: 0;
     margin-bottom: 24px;
     text-align: center;
+    @include font-face(700, 17px, 24px);
   }
 
   .promo__button-link {
     min-width: 256px;
+    @include font-face(700, 18px, 20px);
   }
 }

@@ -12,6 +12,7 @@
     padding: 0;
     margin: 0;
     margin-bottom: 82px;
+    @include font-face(700, 25px, 30px);
   }
 
   .about__advantages-list {

@@ -22,15 +22,19 @@
   .product__title {
     padding: 0;
     margin: 0;
+    @include font-face(700, 17px, 24px);
   }
 
   .product__text {
     padding: 0;
     margin: 0;
+    @include font-face(400, 13px, 30px);
+    color: $g-black;
   }
 
   .product__price {
     padding: 0;
     margin: 0;
+    @include font-face(700, 15px, 24px);
   }
 }

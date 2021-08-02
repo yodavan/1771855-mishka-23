@@ -12,6 +12,8 @@
     margin-left: 30px;
     margin-right: 30px;
     margin-bottom: 28px;
+    @include font-face(700, 25px, 30px);
+    color: $black;
   }
 
   .contacts__list {
@@ -24,6 +26,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 62px;
+    @include font-face(400, 14px, 30px);
   }
 
   .contacts__item {
@@ -54,5 +57,6 @@
   .contacts__button-link {
     margin-left: 30px;
     margin-right: 30px;
+    @include font-face(700, 18px, 20px);
   }
 }

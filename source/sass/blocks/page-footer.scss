@@ -21,6 +21,8 @@
     min-height: 80px;
     margin: 0;
     padding: 0;
+    @include font-face(700, 19px, 18px);
+    color: $black;
   }
 
   .page-footer__link {

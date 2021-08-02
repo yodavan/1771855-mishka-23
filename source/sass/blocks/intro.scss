@@ -13,5 +13,6 @@
   .intro__title-bold {
     padding: 0;
     margin: 0;
+    @include font-face(700, 27px, 30px);
   }
 }
