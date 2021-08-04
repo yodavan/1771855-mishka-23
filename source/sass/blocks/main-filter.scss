@@ -1,10 +1,9 @@
 .main-filter {
   width: 100%;
+}
 
-  .main-filter__form {
-    margin-left: 30px;
-    margin-right: 30px;
-    padding-top: 17px;
-    padding-bottom: 55px;
-  }
+.main-filter__wrapper {
+  margin: 0 auto;
+  padding: 17px 30px 55px;
+  max-width: 365px;
 }
