@@ -1,0 +1,25 @@
+.user-list {
+  position: absolute;
+  top: 300%;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: $white;
+}
+
+.user-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 78px;
+  list-style: none;
+  border-bottom: 1px solid $o-black;
+}
+
+.user-list__link {
+  text-decoration: none;
+
+  @include font-face(700, 17px, 24px);
+  color: $black;
+}
