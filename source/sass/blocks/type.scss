@@ -1,0 +1,21 @@
+.type {
+  padding: 0;
+  margin: 0;
+}
+
+.type__item {
+  margin-bottom: 11px;
+  list-style: none;
+
+  &:first-of-type {
+    margin-top: 30px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.type__input {
+  margin-right: 19px;
+}

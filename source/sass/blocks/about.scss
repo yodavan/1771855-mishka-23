@@ -1,0 +1,22 @@
+.about {
+  width: 100%;
+  color: $black;
+}
+
+.about__wrapper {
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 365px;
+}
+
+.about__title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 82px;
+
+  @include font-face(700, 25px, 30px);
+}
+
+.about__advantages-list {
+  min-width: 260px;
+}

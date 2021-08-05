@@ -1,0 +1,23 @@
+.production {
+  width: 100%;
+}
+
+.production__wrapper {
+  margin: 0 auto;
+  padding: 0 30px 58px;
+  max-width: 365px;
+}
+
+.production__list {
+  padding: 0;
+  margin: 0;
+}
+
+.production__item {
+  list-style: none;
+}
+
+.production__product-video {
+  min-width: 258px;
+  min-height: 503px;
+}

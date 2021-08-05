@@ -1,0 +1,21 @@
+.color {
+  padding: 0;
+  margin: 0;
+}
+
+.color__item {
+  margin-bottom: 33px;
+  list-style: none;
+
+  &:first-of-type {
+    margin-top: 35px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.color__input {
+  margin-right: 23px;
+}
