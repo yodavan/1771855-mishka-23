@@ -1,13 +1,6 @@
 .user-list {
-  position: absolute;
-  top: 300%;
-  z-index: 1;
-  left: 50%;
-  transform: translate(-50%);
-  max-width: 425px;
   padding: 0;
   margin: 0;
-  width: 100%;
   background-color: $white;
 }
 
@@ -25,4 +18,35 @@
 
   @include font-face(700, 17px, 24px);
   color: $black;
+}
+
+@media (min-width: $tablet-width) {
+  .user-list {
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+  }
+
+  .user-list__item {
+    min-height: 89px;
+    margin-right: 65px;
+    border: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: $desctop-width) {
+  .user-list {
+    justify-content: flex-end;
+    min-width: 50%;
+  }
+
+  .user-list__item {
+    min-height: 89px;
+    border: none;
+  }
 }
