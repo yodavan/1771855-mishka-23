@@ -3,8 +3,8 @@
 }
 
 .page-footer__wrapper {
-  width: 100%;
   min-height: 160px;
+  margin: 0 auto;
 }
 
 .page-footer__logo {
@@ -29,4 +29,34 @@
 
 .page-footer__link {
   margin-left: 27px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 143px;
+    min-width: 668px;
+    padding: 0 50px;
+  }
+
+  .page-footer__logo {
+    display: block;
+    width: 101px;
+    height: 34px;
+  }
+
+  .page-footer__list {
+    min-height: 80px;
+  }
+
+  .page-footer__developer {
+    @include font-face(700, 19px, 18px);
+    color: $black;
+  }
+
+  .page-footer__link {
+    margin-left: 27px;
+  }
 }

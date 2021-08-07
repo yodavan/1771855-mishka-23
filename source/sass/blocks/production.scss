@@ -21,3 +21,21 @@
   min-width: 258px;
   min-height: 503px;
 }
+
+@media (min-width: $tablet-width) {
+  .production__wrapper {
+    padding: 0 50px 64px;
+    min-width: 666px;
+  }
+}
+
+@media (min-width: $desctop-width) {
+  .production__wrapper {
+    padding-bottom: 105px;
+    min-width: 1048px;
+  }
+
+  .production__product-video {
+    min-height: 455px;
+  }
+}
