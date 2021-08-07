@@ -160,7 +160,6 @@
 
 @media (min-width: $desctop-width) {
   .promo__wrapper {
-    display: grid;
     grid-template-columns: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
     grid-template-rows: min-content min-content min-content min-content 52px;
     padding: 71px 50px 84px;
