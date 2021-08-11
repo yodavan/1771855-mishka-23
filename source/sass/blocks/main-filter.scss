@@ -5,5 +5,10 @@
 .main-filter__wrapper {
   margin: 0 auto;
   padding: 17px 30px 55px;
-  max-width: 365px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-filter__wrapper {
+    padding: 66px 0 50px;
+  }
 }

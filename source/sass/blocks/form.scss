@@ -47,6 +47,8 @@
 .form__legend {
   min-width: 40px;
   padding-right: 20px;
+  text-transform: uppercase;
+  color: $l-green;
 }
 
 .form__input-tel {
@@ -88,4 +90,125 @@
   width: 100%;
 
   @include font-face(700, 17px, 16px);
+}
+
+@media (min-width: $tablet-width) {
+  .form__text {
+    padding-left: 50px;
+    padding-right: 50px;
+
+    @include font-face(400, 17px, 30px);
+  }
+
+  .form__search {
+    border-top: none;
+
+    @include font-face(700, 19px, 18px);
+  }
+
+  .form__search--wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .form__wrapper-color {
+    background-color: $w-gray;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .form__legend {
+    float: left;
+    min-width: 167px;
+    padding-right: 0;
+  }
+
+  .form__input-tel {
+    background-color: transparent;
+
+    @include font-face(400, 17px, 18px);
+  }
+
+  .form__input-mail {
+    background-color: transparent;
+
+    @include font-face(400, 17px, 18px);
+    font-family: "OpenSans", "Arial", sans-serif;
+  }
+
+  .form__list {
+    display: flex;
+  }
+
+  .form__wrapper-button {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .form__button-link {
+    width: 230px;
+
+    @include font-face(700, 17px, 16px);
+  }
+}
+
+@media (min-width: $desctop-width) {
+  .form__text {
+    padding-left: 225px;
+    padding-right: 223px;
+  }
+
+  .form__search {
+    border-top: none;
+
+    @include font-face(700, 19px, 18px);
+  }
+
+  .form__search--wrapper {
+    padding-left: 97px;
+    padding-right: 225px;
+  }
+
+  .form__wrapper-color {
+    background-color: $w-gray;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .form__legend {
+    float: left;
+    min-width: 130px;
+    padding-right: 0;
+  }
+
+  .form__input-tel {
+    background-color: transparent;
+
+    @include font-face(400, 17px, 18px);
+  }
+
+  .form__input-mail {
+    background-color: transparent;
+
+    @include font-face(400, 17px, 18px);
+    font-family: "OpenSans", "Arial", sans-serif;
+  }
+
+  .form__list {
+    display: flex;
+  }
+
+  .form__wrapper-button {
+    padding-left: 225px;
+    padding-right: 225px;
+  }
+
+  .form__button-link {
+    width: 230px;
+
+    @include font-face(700, 17px, 16px);
+  }
 }
