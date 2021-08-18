@@ -1,5 +1,13 @@
 .product-video {
   width: 100%;
+
+  &:hover {
+    box-shadow: 0 6px 10px $o-black;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px $o-black;
+  }
 }
 
 .product-video__title {
@@ -13,8 +21,6 @@
 
   @include font-face(700, 17px, 24px);
   color: $black;
-  border: 1px solid $n-white;
-  border-bottom: none;
 }
 
 .product-video__clip-wrapper {
@@ -42,8 +48,6 @@
 .product-video__column-wrapper {
   padding-top: 13%;
   padding-bottom: 13%;
-  border: 1px solid $n-white;
-  border-top: none;
 }
 
 .product-video__text {
@@ -63,7 +67,6 @@
 @media (min-width: $tablet-width) {
   .product-video {
     display: grid;
-    border: 1px solid $n-white;
   }
 
   .product-video__title {
@@ -74,12 +77,10 @@
     min-height: 24px;
 
     @include font-face(700, 20px, 24px);
-    border: none;
   }
 
   .product-video__clip-wrapper {
     grid-row: 1 / 2;
-    min-width: 668px;
     min-height: 455px;
     margin-bottom: 41px;
     background: url("../img/catalog/video-tablet.jpg") no-repeat;
@@ -91,7 +92,6 @@
 
   .product-video__column-wrapper {
     padding: 0;
-    border: none;
   }
 
   .product-video__text {
@@ -116,7 +116,6 @@
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     grid-template-rows: min-content min-content;
-    border: 1px solid $n-white;
   }
 
   .product-video__title {
@@ -145,7 +144,6 @@
     grid-column: -4 / -1;
     grid-row: 2 / 3;
     padding: 0 57px 60px 80px;
-    border: none;
   }
 
   .product-video__text {

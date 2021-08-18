@@ -1,5 +1,18 @@
 .product {
   width: 100%;
+
+  &:hover {
+    box-shadow: 0 6px 10px $o-black;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px $o-black;
+  }
+}
+
+.product__link {
+  text-decoration: none;
+  color: $black;
 }
 
 .product__image-wrapper {

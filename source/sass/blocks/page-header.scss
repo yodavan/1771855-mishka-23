@@ -7,7 +7,7 @@
 }
 
 .page-header__wrapper {
-  width: 100%;
+  min-width: 320px;
   min-height: 395px;
 }
 
@@ -32,7 +32,7 @@
   .page-header__wrapper {
     position: relative;
     margin: 0 auto;
-    max-width: 768px;
+    min-width: 768px;
     min-height: 319px;
   }
 
@@ -63,7 +63,7 @@
 
 @media (min-width: $desctop-width) {
   .page-header__wrapper {
-    max-width: 1150px;
+    min-width: 1150px;
   }
 
   .page-header__logo {
