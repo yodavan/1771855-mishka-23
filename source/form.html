@@ -138,22 +138,30 @@
             <div class="form__wrapper-color">
               <fieldset class="form__search form__search--wrapper">
                 <legend class="form__legend">тел</legend>
-                <label class="visually-hidden" for="form_your_tel">Введите ваш номер телефона</label>
-                <input class="form__input-tel" type="tel" name="form_your_tel" id="form_your_tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+                <div class="form__list">
+                  <label class="visually-hidden" for="form_your_tel">Введите ваш номер телефона</label>
+                  <input class="form__input-tel" type="tel" name="form_your_tel" id="form_your_tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+                </div>
               </fieldset>
               <fieldset class="form__search form__search--wrapper">
-                  <legend class="form__legend">E-mail</legend>
+                <legend class="form__legend">E-mail</legend>
+                <div class="form__list">
                   <label class="visually-hidden" for="form_your_mail">Введите ваш E-mail</label>
                   <input class="form__input-mail" type="email" name="form_your_mail" id="form_your_mail" placeholder="Ваш Email*">
-                </fieldset>
+                </div>
+              </fieldset>
             </div>
             <fieldset class="form__search form__search--wrapper">
               <legend class="form__legend">Доп</legend>
-              <label class="visually-hidden" for="form_additional_information">Поле ввода дополнительной информации по заказу</label>
-              <textarea name="form_additional_information" id="form_additional_information" cols="30" rows="7" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <div class="form__list">
+                <label class="visually-hidden" for="form_additional_information">Поле ввода дополнительной информации по заказу</label>
+                <textarea name="form_additional_information" id="form_additional_information" cols="30" rows="7" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              </div>
             </fieldset>
-            <p class="form__small-text">*Поля обязательны для заполнения</p>
-            <button class="form__button-link button-link" type="submit">Отправить заказ</button>
+            <div class="form__wrapper-button">
+              <p class="form__small-text">*Поля обязательны для заполнения</p>
+              <button class="form__button-link button-link" type="submit">Отправить заказ</button>
+            </div>
           </form>
         </div>
       </section>

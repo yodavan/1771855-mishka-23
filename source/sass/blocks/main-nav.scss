@@ -1,26 +1,51 @@
 .main-nav {
   color: $black;
+  position: relative;
 }
 
 .main-nav__wrapper {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
+  display: grid;
+  grid-template-rows: 79px auto auto;
+  max-width: 425px;
   min-height: 79px;
+  margin: 0 auto;
 }
 
 .main-nav__dropdown {
-  padding: 0;
-  margin: 0;
-  margin-right: 30px;
+  justify-self: end;
+  align-self: center;
   width: 20px;
   height: 14px;
-  background-color: $white;
+  padding: 0;
+  margin-right: 31px;
   border: none;
   cursor: pointer;
 }
 
 .main-nav__list {
   display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 668px;
+    min-height: 89px;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+
+  .main-nav__dropdown {
+    display: none;
+  }
+}
+
+@media (min-width: $desctop-width) {
+  .main-nav__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1050px;
+  }
 }

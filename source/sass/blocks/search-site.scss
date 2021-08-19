@@ -1,0 +1,11 @@
+.search-site__span-hidden {
+  min-width: 167px;
+
+  @include font-face(700, 17px, 24px);
+}
+
+@media (min-width: $tablet-width) {
+  .search-site__span-hidden {
+    display: none;
+  }
+}

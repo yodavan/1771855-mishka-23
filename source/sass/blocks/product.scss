@@ -1,5 +1,18 @@
 .product {
   width: 100%;
+
+  &:hover {
+    box-shadow: 0 6px 10px $o-black;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px $o-black;
+  }
+}
+
+.product__link {
+  text-decoration: none;
+  color: $black;
 }
 
 .product__image-wrapper {
@@ -42,4 +55,102 @@
   margin: 0;
 
   @include font-face(700, 15px, 24px);
+}
+
+@media (min-width: $tablet-width) {
+  .product {
+    display: flex;
+  }
+
+  .product__image-wrapper {
+    min-width: 334px;
+    min-height: 334px;
+  }
+
+  .catalog__item:first-of-type .product__image-wrapper {
+    background: url("../img/catalog/bunny-tablet.jpg") no-repeat;
+  }
+
+  .catalog__item:nth-of-type(2) .product__image-wrapper {
+    background: url("../img/catalog/photo-2-tablet.jpg") no-repeat;
+  }
+
+  .catalog__item:nth-of-type(3) .product__image-wrapper {
+    background: url("../img/catalog/photo-3-tablet.jpg") no-repeat;
+  }
+
+  .product__image-wrapper img {
+    display: none;
+  }
+
+  .product__details-wrapper {
+    display: grid;
+    grid-template-rows: min-content min-content 1fr;
+    width: 266px;
+    min-height: 281px;
+    padding: 27px 33px 25px;
+    border: 1px solid $n-white;
+    border-left: none;
+  }
+
+  .product__title {
+    @include font-face(700, 20px, 24px);
+  }
+
+  .product__text {
+    @include font-face(400, 15px, 30px);
+    color: $g-black;
+  }
+
+  .product__price {
+    align-self: end;
+
+    @include font-face(700, 15px, 24px);
+  }
+}
+
+@media (min-width: $desctop-width) {
+  .product {
+    display: block;
+  }
+
+  .product__image-wrapper {
+    min-width: 316px;
+    min-height: 462px;
+  }
+
+  .catalog__item:first-of-type .product__image-wrapper {
+    background: url("../img/catalog/bunny-desktop.jpg") no-repeat;
+  }
+
+  .catalog__item:nth-of-type(2) .product__image-wrapper {
+    background: url("../img/catalog/photo-2-desktop.jpg") no-repeat;
+  }
+
+  .catalog__item:nth-of-type(3) .product__image-wrapper {
+    background: url("../img/catalog/photo-3-desktop.png") no-repeat;
+  }
+
+  .product__details-wrapper {
+    width: 262px;
+    min-height: 145px;
+    padding: 26px;
+    border: 1px solid $n-white;
+    border-top: none;
+  }
+
+  .product__title {
+    @include font-face(700, 20px, 24px);
+  }
+
+  .product__text {
+    @include font-face(400, 15px, 30px);
+    color: $g-black;
+  }
+
+  .product__price {
+    align-self: end;
+
+    @include font-face(700, 15px, 24px);
+  }
 }

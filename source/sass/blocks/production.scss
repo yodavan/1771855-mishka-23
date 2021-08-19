@@ -15,9 +15,28 @@
 
 .production__item {
   list-style: none;
+  border: 1px solid $w-gray;
 }
 
 .production__product-video {
   min-width: 258px;
   min-height: 503px;
+}
+
+@media (min-width: $tablet-width) {
+  .production__wrapper {
+    padding: 0 50px 64px;
+    min-width: 668px;
+  }
+}
+
+@media (min-width: $desctop-width) {
+  .production__wrapper {
+    padding-bottom: 105px;
+    min-width: 1050px;
+  }
+
+  .production__product-video {
+    min-height: 455px;
+  }
 }

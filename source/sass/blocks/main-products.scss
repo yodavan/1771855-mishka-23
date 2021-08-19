@@ -64,3 +64,90 @@
 .main-products__categories--toy {
   background-color: $d-green;
 }
+
+@media (min-width: $tablet-width) {
+  .main-products__wrapper {
+    min-height: 746px;
+    min-width: 768px;
+    margin: 0 auto;
+  }
+
+  .main-products__title-bold {
+    min-width: 668px;
+    min-height: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    @include font-face(700, 43px, 50px);
+  }
+
+  .main-products__image {
+    margin-bottom: -119px;
+    min-height: 746px;
+    min-width: 768px;
+    background: $w-gray url("../img/index/main-products/hero-tablet.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .main-products__image img {
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .main-products__categories-inner {
+    flex-direction: row;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .main-products__categories {
+    width: 100%;
+    min-height: 119px;
+
+    @include font-face(700, 20px, 30px);
+  }
+}
+
+@media (min-width: $desctop-width) {
+  .main-products__wrapper {
+    min-height: 746px;
+    min-width: 1150px;
+    margin: 0 auto;
+  }
+
+  .main-products__title-bold {
+    max-width: 700px;
+    min-height: 114px;
+    padding: 0;
+
+    @include font-face(700, 53px, 57px);
+  }
+
+  .main-products__image {
+    margin-bottom: -119px;
+    min-height: 746px;
+    min-width: 768px;
+    background: $w-gray url("../img/index/main-products/hero-desktop.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .main-products__image img {
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .main-products__categories-inner {
+    flex-direction: row;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .main-products__categories {
+    width: 100%;
+    min-height: 119px;
+
+    @include font-face(700, 20px, 30px);
+  }
+}

@@ -1,5 +1,13 @@
 .product-video {
   width: 100%;
+
+  &:hover {
+    box-shadow: 0 6px 10px $o-black;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px $o-black;
+  }
 }
 
 .product-video__title {
@@ -13,8 +21,6 @@
 
   @include font-face(700, 17px, 24px);
   color: $black;
-  border: 1px solid $n-white;
-  border-bottom: none;
 }
 
 .product-video__clip-wrapper {
@@ -42,8 +48,6 @@
 .product-video__column-wrapper {
   padding-top: 13%;
   padding-bottom: 13%;
-  border: 1px solid $n-white;
-  border-top: none;
 }
 
 .product-video__text {
@@ -58,4 +62,100 @@
   margin: 16% 13% 0 13%;
 
   @include font-face(700, 18px, 16px);
+}
+
+@media (min-width: $tablet-width) {
+  .product-video {
+    display: grid;
+  }
+
+  .product-video__title {
+    grid-row: 2 / 3;
+    padding: 0;
+    margin-left: 107px;
+    margin-bottom: 24px;
+    min-height: 24px;
+
+    @include font-face(700, 20px, 24px);
+  }
+
+  .product-video__clip-wrapper {
+    grid-row: 1 / 2;
+    min-height: 455px;
+    margin-bottom: 41px;
+    background: url("../img/catalog/video-tablet.jpg") no-repeat;
+  }
+
+  .product-video__clip-wrapper img {
+    display: none;
+  }
+
+  .product-video__column-wrapper {
+    padding: 0;
+  }
+
+  .product-video__text {
+    padding: 0;
+    margin: 0;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+
+    @include font-face(400, 15px, 30px);
+  }
+
+  .product-video__button-link {
+    margin: 0 52px 46px;
+
+    @include font-face(700, 17px, 16px);
+  }
+}
+
+@media (min-width: $desctop-width) {
+  .product-video {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: min-content min-content;
+  }
+
+  .product-video__title {
+    display: block;
+    grid-column: -4 / -1;
+    grid-row: 1 / 2;
+    padding: 96px 60px 0 80px;
+    margin: 0;
+    margin-bottom: 20px;
+    min-height: 24px;
+
+    @include font-face(700, 20px, 24px);
+    border: none;
+  }
+
+  .product-video__clip-wrapper {
+    grid-row: 1 / -1;
+    grid-column: 1 / 4;
+    min-width: 681px;
+    min-height: 455px;
+    margin-bottom: 0;
+    background: url("../img/catalog/video-desktop.jpg") no-repeat;
+  }
+
+  .product-video__column-wrapper {
+    grid-column: -4 / -1;
+    grid-row: 2 / 3;
+    padding: 0 57px 60px 80px;
+  }
+
+  .product-video__text {
+    margin: 0;
+    margin-bottom: 51px;
+
+    @include font-face(400, 15px, 30px);
+  }
+
+  .product-video__button-link {
+    margin: 0;
+
+    @include font-face(700, 17px, 16px);
+  }
 }

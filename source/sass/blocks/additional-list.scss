@@ -1,3 +1,26 @@
 .additional-list {
   display: none;
 }
+
+@media (min-width: $desctop-width) {
+  .additional-list {
+    display: flex;
+    min-height: 43px;
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .additional-list__item {
+    align-self: flex-end;
+    list-style: none;
+    margin-right: 45px;
+  }
+
+  .additional-list__link {
+    text-decoration: none;
+
+    @include font-face(700, 17px, 24px);
+    color: $black;
+  }
+}

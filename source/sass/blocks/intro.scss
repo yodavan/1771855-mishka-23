@@ -7,8 +7,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 320px;
-  max-width: 425px;
   min-height: 177px;
   margin: 0 auto;
 }
@@ -18,4 +16,24 @@
   margin: 0;
 
   @include font-face(700, 27px, 30px);
+}
+
+@media (min-width: $tablet-width) {
+  .intro__wrapper-color {
+    min-height: 226px;
+  }
+
+  .intro__title-bold {
+    @include font-face(700, 43px, 50px);
+  }
+}
+
+@media (min-width: $desctop-width) {
+  .intro__wrapper-color {
+    min-height: 255px;
+  }
+
+  .intro__title-bold {
+    @include font-face(700, 53px, 57px);
+  }
 }
