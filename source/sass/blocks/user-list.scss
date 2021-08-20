@@ -20,6 +20,18 @@
   color: $black;
 }
 
+.user-list__link path {
+  &:hover {
+    fill: $l-green;
+    opacity: 1;
+    pointer-events: stroke;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .user-list {
     align-self: flex-end;
@@ -30,12 +42,27 @@
 
   .user-list__item {
     min-height: 89px;
-    margin-right: 65px;
     border: none;
+    border-left: 1px solid $o-black;
 
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  .user-list__item:first-child {
+    width: 82px;
+  }
+
+  .user-list__link {
+    display: flex;
+    margin-left: 30px;
+  }
+
+  .user-list__span {
+    width: 191px;
+    margin-left: 20px;
+    text-align: end;
   }
 }
 
@@ -47,6 +74,5 @@
 
   .user-list__item {
     min-height: 89px;
-    border: none;
   }
 }

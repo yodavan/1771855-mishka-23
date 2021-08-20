@@ -36,12 +36,14 @@
 
 .reviews__cite {
   display: block;
+  width: 284px;
 
   @include font-face(700, 17px, 24px);
 }
 
 .reviews__nick-name {
   display: block;
+  width: 284px;
 
   @include font-face(400, 17px, 30px);
 }
@@ -67,6 +69,15 @@
   padding: 0;
   background-color: $white;
   border: 1px solid $n-white;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .toggle-left {
@@ -126,6 +137,7 @@
   }
 
   .reviews__toggles {
+    z-index: 1;
     grid-column: 4 / -1;
     grid-row: -1 / -2;
     margin-bottom: 50px;
