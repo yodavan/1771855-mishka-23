@@ -1,5 +1,5 @@
 .search-site {
-  height: 70%;
+  height: 50%;
 }
 
 .search-site__span-hidden {
@@ -11,16 +11,19 @@
 .search-site__button {
   width: 100%;
   height: 100%;
+  padding: 10px;
   border: none;
   background-color: $white;
   cursor: pointer;
-}
 
-.search-site__button path {
   &:hover {
-    fill: $l-green;
-    opacity: 1;
-    pointer-events: stroke;
+    stroke-width: 4;
+
+    path {
+      fill: $l-green;
+      opacity: 1;
+      pointer-events: stroke;
+    }
   }
 
   &:active {

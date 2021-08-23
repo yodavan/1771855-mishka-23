@@ -18,13 +18,19 @@
 
   @include font-face(700, 17px, 24px);
   color: $black;
-}
 
-.user-list__link path {
   &:hover {
-    fill: $l-green;
-    opacity: 1;
-    pointer-events: stroke;
+    stroke-width: 4;
+
+    path {
+      fill: $l-green;
+      opacity: 1;
+      pointer-events: stroke;
+    }
+
+    span {
+      opacity: 0.6;
+    }
   }
 
   &:active {

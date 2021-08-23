@@ -28,6 +28,27 @@
 }
 
 .page-footer__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $black;
+
+  &:hover {
+    stroke-width: 4;
+
+    path {
+      fill: $dd-green;
+    }
+  }
+
+  &:active {
+    path {
+      opacity: 0.3;
+    }
+  }
+}
+
+.page-footer__link svg {
   margin-left: 27px;
 }
 
@@ -46,6 +67,18 @@
     display: block;
     width: 101px;
     height: 34px;
+
+    &:hover {
+      stroke-width: 4;
+
+      path {
+        fill: $dd-green;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
   }
 
   .page-footer__list {
@@ -55,9 +88,5 @@
   .page-footer__developer {
     @include font-face(700, 19px, 18px);
     color: $black;
-  }
-
-  .page-footer__link {
-    margin-left: 27px;
   }
 }

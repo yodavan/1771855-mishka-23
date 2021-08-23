@@ -20,7 +20,19 @@
 
 @media (min-width: $tablet-width) {
   .intro__wrapper-color {
+    position: relative;
     min-height: 226px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      left: 0;
+      bottom: -12px;
+      background-image: url("../img/catalog/intro/zigzag-fill-desktop.svg");
+      background-size: cover;
+    }
   }
 
   .intro__title-bold {
@@ -31,6 +43,11 @@
 @media (min-width: $desctop-width) {
   .intro__wrapper-color {
     min-height: 255px;
+
+    &::before {
+      height: 34px;
+      bottom: -17px;
+    }
   }
 
   .intro__title-bold {

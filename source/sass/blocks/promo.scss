@@ -3,9 +3,21 @@
 }
 
 .promo__wrapper {
+  position: relative;
   margin: 0 auto;
   padding: 31px 30px 36px;
   max-width: 365px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: url("../img/index/promo/zigzag-line-desktop.svg") no-repeat;
+    background-size: cover;
+  }
 }
 
 .promo__title {
@@ -93,6 +105,11 @@
     padding: 52px 50px 60px;
     max-width: 668px;
     min-height: 504px;
+
+    &::before {
+      bottom: -9px;
+      height: 18px;
+    }
   }
 
   .promo__title {
@@ -165,6 +182,13 @@
     padding: 71px 50px 84px;
     max-width: 1050px;
     min-height: 504px;
+
+    &::before {
+      left: 4.76%;
+      bottom: -12px;
+      height: 24px;
+      width: 91.3%;
+    }
   }
 
   .promo__title {
