@@ -1,6 +1,8 @@
 .main-nav {
+  position: absolute;
+  left: 0;
+  width: 100%;
   color: $black;
-  position: relative;
 }
 
 .main-nav__wrapper {
@@ -19,11 +21,48 @@
   padding: 0;
   margin-right: 31px;
   border: none;
+  background-color: $white;
   cursor: pointer;
 }
 
-.main-nav__list {
+.main-nav__dropdown-closed {
+  position: relative;
+  justify-self: end;
+  align-self: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin-right: 31px;
+  border: none;
+  background-color: $white;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    width: 2px;
+    height: 24px;
+    background-color: $black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--closed {
   display: none;
+}
+
+.main-nav--nojs {
+  position: static;
 }
 
 @media (min-width: $tablet-width) {

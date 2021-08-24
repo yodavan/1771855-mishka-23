@@ -4,7 +4,11 @@
 }
 
 .color__item {
-  margin-bottom: 33px;
+  display: flex;
+  align-items: center;
+  min-height: 38px;
+  margin-left: 61px;
+  margin-bottom: 23px;
   list-style: none;
 
   &:first-of-type {
@@ -16,8 +20,43 @@
   }
 }
 
-.color__input {
-  margin-right: 23px;
+.color__item label {
+  position: relative;
+  cursor: pointer;
+}
+
+.color__input + label::before {
+  content: "";
+  position: absolute;
+  left: -61px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 36px;
+  height: 36px;
+  border: 1px solid $g-black;
+}
+
+.color__input:hover + label::before {
+  border: 1px solid $n-green;
+}
+
+.color__input:active + label::before {
+  border: 1px solid $od-black;
+}
+
+
+.color__input:checked + label::after {
+  content: "";
+  position: absolute;
+  left: -54px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 23px;
+  height: 16px;
+  background: url("../img/form/Checkbox/Tick.svg") no-repeat;
+  background-size: cover;
 }
 
 @media (min-width: $tablet-width) {
@@ -26,21 +65,29 @@
   }
 
   .color__item {
-    width: 210px;
+    width: 135px;
     min-height: 52px;
-    margin-right: 15px;
-    margin-bottom: 0;
+    margin: 0 15px 24px 82px;
 
     &:first-of-type {
       margin-top: 0;
     }
 
     &:last-of-type {
-      margin-bottom: 0;
+      margin-bottom: 24px;
     }
   }
 
-  .color__input {
-    margin-right: 30px;
+  .color__input + label::before {
+    content: "";
+    left: -82px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .color__input:checked + label::after {
+    left: -72px;
+    width: 32px;
+    height: 22px;
   }
 }

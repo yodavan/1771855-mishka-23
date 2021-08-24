@@ -18,6 +18,24 @@
 
   @include font-face(700, 17px, 24px);
   color: $black;
+
+  &:hover {
+    stroke-width: 4;
+
+    path {
+      fill: $l-green;
+      opacity: 1;
+      pointer-events: stroke;
+    }
+
+    span {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -30,12 +48,27 @@
 
   .user-list__item {
     min-height: 89px;
-    margin-right: 65px;
     border: none;
+    border-left: 1px solid $o-black;
 
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  .user-list__item:first-child {
+    width: 82px;
+  }
+
+  .user-list__link {
+    display: flex;
+    margin-left: 30px;
+  }
+
+  .user-list__span {
+    width: 191px;
+    margin-left: 20px;
+    text-align: end;
   }
 }
 
@@ -47,6 +80,5 @@
 
   .user-list__item {
     min-height: 89px;
-    border: none;
   }
 }

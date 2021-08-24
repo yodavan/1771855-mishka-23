@@ -1,7 +1,34 @@
+.search-site {
+  height: 50%;
+}
+
 .search-site__span-hidden {
   min-width: 167px;
 
   @include font-face(700, 17px, 24px);
+}
+
+.search-site__button {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: none;
+  background-color: $white;
+  cursor: pointer;
+
+  &:hover {
+    stroke-width: 4;
+
+    path {
+      fill: $l-green;
+      opacity: 1;
+      pointer-events: stroke;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {

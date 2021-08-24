@@ -26,21 +26,33 @@
   &:last-of-type {
     margin-bottom: 17px;
   }
+}
 
-  & textarea {
-    padding: 0;
-    margin: 0;
-    margin-top: 22px;
-    width: 100%;
-    min-height: 140px;
+.form__search--wrapper textarea {
+  padding: 17px;
+  margin: 0;
+  margin-top: 22px;
+  width: 100%;
+  min-height: 106px;
 
-    @include font-face(400, 17px, 18px);
-    font-family: "OpenSans", "Arial", sans-serif;
-    box-sizing: border-box;
+  @include font-face(400, 17px, 18px);
+  font-family: "OpenSans", "Arial", sans-serif;
+  border: 2px solid $g-black;
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+
+  &::placeholder {
+    color: $black;
+    opacity: 0.3;
   }
 
-  & textarea::placeholder {
-    padding: 17px;
+  &:hover {
+    border: 2px solid $n-green;
+  }
+
+  &:focus {
+    border: 2px solid $n-green;
   }
 }
 
@@ -51,18 +63,7 @@
   color: $l-green;
 }
 
-.form__input-tel {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  min-height: 51px;
-  border: none;
-  border-bottom: 1px solid $black;
-
-  @include font-face(400, 17px, 18px);
-  font-family: "OpenSans", "Arial", sans-serif;
-}
-
+.form__input-tel,
 .form__input-mail {
   padding: 0;
   margin: 0;
@@ -73,6 +74,61 @@
 
   @include font-face(400, 17px, 18px);
   font-family: "OpenSans", "Arial", sans-serif;
+  outline: none;
+  cursor: pointer;
+
+  &::placeholder {
+    color: $black;
+    opacity: 0.3;
+  }
+}
+
+.form__list {
+  position: relative;
+
+  &:hover {
+    stroke-width: 4;
+
+    .form__input-tel,
+    .form__input-mail {
+      border-bottom: 1px solid $n-green;
+    }
+
+    path {
+      fill: $n-green;
+      opacity: 1;
+    }
+
+    g {
+      opacity: 1;
+    }
+  }
+
+  &:focus-within {
+    .form__input-tel,
+    .form__input-mail {
+      border-bottom: 1px solid $n-green;
+    }
+
+    path {
+      fill: $n-green;
+      opacity: 1;
+    }
+
+    g {
+      opacity: 1;
+    }
+  }
+}
+
+.form__button-mail,
+.form__button-tel {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
 .form__small-text {
@@ -90,12 +146,14 @@
   width: 100%;
 
   @include font-face(700, 17px, 16px);
+  cursor: pointer;
 }
 
 @media (min-width: $tablet-width) {
   .form__text {
     padding-left: 50px;
     padding-right: 50px;
+    margin-bottom: 13px;
 
     @include font-face(400, 17px, 30px);
   }
@@ -107,29 +165,36 @@
   }
 
   .form__search--wrapper {
-    padding-left: 50px;
-    padding-right: 50px;
+    margin: 0;
+    padding: 50px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   .form__wrapper-color {
     background-color: $w-gray;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 26px;
+  }
+
+  .form__wrapper-color .form__search--wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .form__legend {
     float: left;
     min-width: 167px;
     padding-right: 0;
+    margin-top: 16px;
   }
 
+  .form__input-mail,
   .form__input-tel {
-    background-color: transparent;
-
-    @include font-face(400, 17px, 18px);
-  }
-
-  .form__input-mail {
+    padding-left: 18px;
+    padding-right: 18px;
     background-color: transparent;
 
     @include font-face(400, 17px, 18px);
@@ -138,12 +203,14 @@
 
   .form__list {
     display: flex;
+    margin-bottom: 24px;
   }
 
   .form__wrapper-button {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -152,6 +219,12 @@
     width: 230px;
 
     @include font-face(700, 17px, 16px);
+  }
+
+  .form__small-text {
+    margin: 0;
+
+    @include font-face(400, 17px, 30px);
   }
 }
 
@@ -176,12 +249,6 @@
     margin: 0 auto;
   }
 
-  .form__wrapper-color {
-    background-color: $w-gray;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
   .form__legend {
     float: left;
     min-width: 130px;
@@ -199,10 +266,6 @@
 
     @include font-face(400, 17px, 18px);
     font-family: "OpenSans", "Arial", sans-serif;
-  }
-
-  .form__list {
-    display: flex;
   }
 
   .form__wrapper-button {

@@ -12,10 +12,10 @@
         <a class="page-header__logo" href="index.html" aria-label="Переход на главную">
           <img src="img/logo/mishka-logo-mobile.svg" alt="Логотип" width="86" height="35" >
         </a>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--nojs">
           <div class="main-nav__wrapper">
             <button class="main-nav__dropdown" type="button">
-              <img src="img/header/burger-menu.svg" alt="Меню Бургер" width="20" height="14">
+              <img class="main-nav__dropdown-img" src="img/header/burger-menu.svg" alt="Меню Бургер" width="20" height="14">
               <span class="visually-hidden">Открыть Меню</span>
             </button>
             <ul class="main-nav__list main-nav__inner site-list">
@@ -23,7 +23,7 @@
                 <a class="site-list__link" href="catalog.html">Каталог товаров</a>
               </li>
               <li class="site-list__item site-list__item--active">
-                <a class="site-list__link" href="#">Вязание на заказ</a>
+                <a class="site-list__link">Вязание на заказ</a>
               </li>
             </ul>
             <ul class="main-nav__list main-nav__inner user-list">
@@ -78,11 +78,11 @@
               <legend class="form__legend">Тип</legend>
               <ul class="form__list type">
                 <li class="type__item">
-                  <input class="type__input" type="radio" name="type_interior" id="type_interior" checked>
+                  <input class="type__input visually-hidden" type="radio" name="type_interior" id="type_interior" checked>
                   <label for="type_interior">Аксессуар для интерьера</label>
                 </li>
                 <li class="type__item">
-                  <input class="type__input" type="radio" name="type_children_toy" id="type_children_toy">
+                  <input class="type__input visually-hidden" type="radio" name="type_children_toy" id="type_children_toy">
                   <label for="type_children_toy">Детская игрушка</label>
                 </li>
               </ul>
@@ -92,27 +92,27 @@
                 <legend class="form__legend">Цвет</legend>
                 <ul class="form__list color">
                   <li class="color__item">
-                    <input class="color__input" type="checkbox" name="color_white" id="color_white" checked>
+                    <input class="color__input visually-hidden" type="checkbox" name="color_white" id="color_white" checked>
                     <label for="color_white">Белый</label>
                   </li>
                   <li class="color__item">
-                    <input class="color__input" type="checkbox" name="color_gray" id="color_gray" checked>
+                    <input class="color__input visually-hidden" type="checkbox" name="color_gray" id="color_gray" checked>
                     <label for="color_gray">Серый</label>
                   </li>
                   <li class="color__item">
-                    <input class="color__input" type="checkbox" name="color_tiffany" id="color_tiffany">
+                    <input class="color__input visually-hidden" type="checkbox" name="color_tiffany" id="color_tiffany">
                     <label for="color_tiffany">«Тиффани»</label>
                   </li>
                   <li class="color__item">
-                    <input class="color__input" type="checkbox" name="color_black" id="color_black">
+                    <input class="color__input visually-hidden" type="checkbox" name="color_black" id="color_black">
                     <label for="color_black">Черный</label>
                   </li>
                   <li class="color__item">
-                    <input class="color__input" type="checkbox" name="color_pink" id="color_pink">
+                    <input class="color__input visually-hidden" type="checkbox" name="color_pink" id="color_pink">
                     <label for="color_pink">Розовый</label>
                   </li>
                   <li class="color__item">
-                    <input class="color__input" type="checkbox" name="color_orange" id="color_orange">
+                    <input class="color__input visually-hidden" type="checkbox" name="color_orange" id="color_orange">
                     <label for="color_orange">Оранжевый</label>
                   </li>
                 </ul>
@@ -138,9 +138,19 @@
             <div class="form__wrapper-color">
               <fieldset class="form__search form__search--wrapper">
                 <legend class="form__legend">тел</legend>
-                <div class="form__list">
+                <div class="form__list" tabindex="0">
                   <label class="visually-hidden" for="form_your_tel">Введите ваш номер телефона</label>
                   <input class="form__input-tel" type="tel" name="form_your_tel" id="form_your_tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+                  <button class="form__button-tel" type="button">
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g opacity="0.2">
+                      <path d="M17.4395 24C17.0363 24 16.7339 24 16.3306 24C11.3911 23.4074 7.7621 21.1358 5.14113 18.2717C2.52016 15.4075 0.403226 11.7532 0 6.7162C0 6.22237 0 5.82731 0 5.33349C0.100806 4.44461 0.504032 3.85202 1.10887 3.25943C1.71371 2.56808 2.72177 1.77796 3.62903 1.6792C4.33468 1.6792 5.44355 2.17302 5.84677 2.76561C6.25 3.25943 6.45161 4.34584 6.65323 5.13596C6.85484 6.02484 7.25806 7.11125 7.15726 7.90137C6.95565 9.08655 5.34274 9.58037 4.93952 10.4693C6.55242 14.1235 9.07258 16.889 12.5 18.6667C13.3065 18.1729 14.1129 16.7902 15.3226 16.7902C15.7258 16.7902 16.3306 16.9877 16.7339 17.0865C17.2379 17.1852 17.6411 17.3828 18.0444 17.5803C18.75 17.8766 20.0605 18.1729 20.4637 18.7655C20.8669 19.3581 21.1694 20.3457 21.0685 20.9383C20.7661 22.2222 18.6492 23.6049 17.4395 24Z" fill="black"/>
+                      <path d="M12.6008 1.48147C18.5484 1.48147 23.4879 6.22217 23.4879 12.1481H25C25 5.43205 19.4557 0 12.6008 0V1.48147Z" fill="black"/>
+                      <path d="M12.6008 9.18506V10.7653C13.4073 10.7653 14.0121 11.3579 14.0121 12.148H15.625C15.625 10.5678 14.3145 9.18506 12.6008 9.18506Z" fill="black"/>
+                      <path d="M12.6008 6.12356C15.9274 6.12356 18.75 8.79021 18.75 12.1482H20.3629C20.3629 8.00009 16.9355 4.64209 12.7016 4.64209V6.12356H12.6008Z" fill="black"/>
+                      </g>
+                    </svg>
+                  </button>
                 </div>
               </fieldset>
               <fieldset class="form__search form__search--wrapper">
@@ -148,6 +158,11 @@
                 <div class="form__list">
                   <label class="visually-hidden" for="form_your_mail">Введите ваш E-mail</label>
                   <input class="form__input-mail" type="email" name="form_your_mail" id="form_your_mail" placeholder="Ваш Email*">
+                  <button class="form__button-mail" type="button">
+                    <svg width="32" height="21" viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path opacity="0.2" d="M28 0H4C1.8 0 0 1.8 0 4V17C0 19.2 1.8 21 4 21H28C30.2 21 32 19.2 32 17V4C32 1.8 30.2 0 28 0ZM2 5.3L9 10.6L2 15.9V5.3ZM30 17C30 18.1 29.1 19 28 19H4C2.9 19 2 18.1 2 17L9.8 11.1L14.2 14.4C14.7 14.8 15.4 15 16 15C16.6 15 17.3 14.8 17.8 14.4L22.2 11.1L30 17ZM30 15.8L23 10.5L30 5.2V15.8ZM17.2 13.6C16.8 13.9 16.4 14 16 14C15.6 14 15.1 13.9 14.8 13.6L10.7 10.5L9.9 9.9L2 4C2 2.9 2.9 2 4 2H28C29.1 2 30 2.9 30 4L17.2 13.6Z" fill="black"/>
+                    </svg>
+                  </button>
                 </div>
               </fieldset>
             </div>
@@ -203,8 +218,8 @@
           </li>
         </ul>
         <p class="page-footer__developer">
-          Разработано
           <a class="page-footer__link" href="#" aria-label="Разработано HTML Academy">
+            Разработано
             <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13.6506 0H13.5502L0 1.39589V26.0235L13.5502 34L27 26.0235V1.39589L13.6506 0ZM25.0929 12.0645L13.5502 5.28446V5.18475H13.4498L13.3494 5.08504V5.18475L1.90706 12.0645V3.09091L13.4498 1.89443L25.0929 3.09091V12.0645ZM13.4498 6.78006L24.9926 13.4604L20.4758 16.0528L13.3494 11.8651V13.261L19.2714 16.7507L18.368 17.2493L13.3494 14.2581V15.654L17.1636 17.9472L16.3606 18.4457L13.3494 16.651V18.0469L15.2565 19.1437L13.4498 20.2405L2.00744 13.5601L13.4498 6.78006ZM1.90706 15.0557L13.3494 21.8358V22.8328L5.42007 18.1466V19.5425L13.4498 24.3284V25.4252L5.42007 20.739V22.1349L13.4498 26.9208L21.5799 22.0352V16.8504L24.9926 14.8563V24.827L13.4498 31.7067L1.90706 24.9267V15.0557Z" fill="#63D1BB"/>
             </svg>
@@ -212,5 +227,6 @@
         </p>
       </div>
     </footer>
+    <script src="js/main-nav.js"></script>
   </body>
 </html>

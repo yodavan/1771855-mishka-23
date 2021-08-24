@@ -3,16 +3,16 @@
   z-index: 1;
   margin: 0 auto;
   color: $black;
-  margin-bottom: -316px;
 }
 
 .page-header__wrapper {
   min-width: 320px;
-  min-height: 395px;
+  min-height: 79px;
 }
 
 .page-header__logo {
   position: absolute;
+  z-index: 3;
   left: 50%;
   top: 22px;
   width: 86px;
