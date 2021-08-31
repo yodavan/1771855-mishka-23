@@ -1,16 +1,14 @@
 const navMain = document.querySelector(".main-nav");
-const siteList = document.querySelector(".main-nav__list");
-const userList = document.querySelector(".user-list");
-const link = document.querySelector(".main-nav__dropdown");
-const dropdownImg = document.querySelector(".main-nav__dropdown-img");
+const mainNavDropdown = document.querySelector(".main-nav__dropdown");
 
 navMain.classList.remove("main-nav--nojs");
-siteList.classList.add("main-nav--closed");
-userList.classList.add("main-nav--closed");
-link.addEventListener("click", function(evt) {
-  link.classList.add("main-nav__dropdown-closed");
-  dropdownImg.classList.add("main-nav--closed");
-  siteList.classList.remove("main-nav--closed");
-  userList.classList.remove("main-nav--closed");
-});
 
+mainNavDropdown.addEventListener('click', function() {
+  if (navMain.classList.contains('main-nav--closed')) {
+    navMain.classList.remove('main-nav--closed');
+    navMain.classList.add('main-nav--opened');
+  } else {
+    navMain.classList.add('main-nav--closed');
+    navMain.classList.remove('main-nav--opened');
+  }
+});

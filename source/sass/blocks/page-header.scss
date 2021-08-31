@@ -3,6 +3,7 @@
   z-index: 1;
   margin: 0 auto;
   color: $black;
+  width: 100%;
 }
 
 .page-header__wrapper {
@@ -27,6 +28,7 @@
 @media (min-width: $tablet-width) {
   .page-header {
     margin-bottom: -230px;
+    max-width: 900px;
   }
 
   .page-header__wrapper {
@@ -62,6 +64,11 @@
 }
 
 @media (min-width: $desctop-width) {
+  .page-header {
+    min-width: 1150px;
+    max-width: 1300px;
+  }
+
   .page-header__wrapper {
     min-width: 1150px;
   }

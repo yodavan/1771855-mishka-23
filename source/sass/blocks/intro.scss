@@ -26,10 +26,10 @@
     &::before {
       content: "";
       position: absolute;
-      width: 100%;
-      height: 24px;
       left: 0;
-      bottom: -12px;
+      bottom: 0;
+      width: 100%;
+      height: 12px;
       background-image: url("../img/catalog/intro/zigzag-fill-desktop.svg");
       background-size: cover;
     }
@@ -45,8 +45,7 @@
     min-height: 255px;
 
     &::before {
-      height: 34px;
-      bottom: -17px;
+      height: 17px;
     }
   }
 

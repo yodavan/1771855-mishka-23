@@ -49,6 +49,7 @@
 .reviews__cite {
   display: block;
   width: 284px;
+  font-style: normal;
 
   @include font-face(700, 17px, 24px);
 }

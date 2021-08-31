@@ -12,12 +12,11 @@
         <a class="page-header__logo" href="index.html" aria-label="Переход на главную">
           <img src="img/logo/mishka-logo-mobile.svg" alt="Логотип" width="86" height="35">
         </a>
-        <nav class="main-nav main-nav--nojs">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__dropdown" type="button">
+            <span class="visually-hidden">Открыть Меню</span>
+          </button>
           <div class="main-nav__wrapper">
-            <button class="main-nav__dropdown" type="button">
-              <img class="main-nav__dropdown-img" src="img/header/burger-menu.svg" alt="Меню Бургер" width="20" height="14">
-              <span class="visually-hidden">Открыть Меню</span>
-            </button>
             <ul class="main-nav__list main-nav__inner site-list">
               <li class="site-list__item site-list__item--active">
                 <a class="site-list__link">Каталог товаров</a>
@@ -48,7 +47,7 @@
                 </a>
               </li>
             </ul>
-            <ul class="main-nav__list main-nav__inner additional-list">
+            <ul class="main-nav__inner additional-list">
               <li class="additional-list__item">
                 <a class="additional-list__link" href="#">Новые поступления</a>
               </li>
