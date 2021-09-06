@@ -15,12 +15,17 @@
     align-self: flex-end;
     list-style: none;
     margin-right: 45px;
+
+    &:first-child {
+      padding-right: 15px;
+    }
   }
 
   .additional-list__link {
     text-decoration: none;
 
-    @include font-face(700, 17px, 24px);
+    @include font-face(700, 15px, 24px);
+    letter-spacing: 0.5px;
     color: $black;
   }
 }

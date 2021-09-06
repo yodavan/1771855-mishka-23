@@ -8,6 +8,7 @@
   margin-bottom: 29px;
 
   @include font-face(400, 13px, 24px);
+  letter-spacing: 0.5px;
 }
 
 .form__search {
@@ -24,16 +25,16 @@
   margin-bottom: 31px;
 
   &:last-of-type {
-    margin-bottom: 17px;
+    margin-bottom: 16px;
   }
 }
 
 .form__search--wrapper textarea {
   padding: 17px;
   margin: 0;
-  margin-top: 22px;
+  margin-top: 19px;
   width: 100%;
-  min-height: 106px;
+  height: 142px;
 
   @include font-face(400, 17px, 18px);
   font-family: "OpenSans", "Arial", sans-serif;
@@ -83,6 +84,14 @@
   }
 }
 
+.form__input-tel {
+  margin-bottom: 5px;
+}
+
+.form__input-mail {
+  margin-bottom: 20px;
+}
+
 .form__list {
   position: relative;
 
@@ -121,10 +130,19 @@
   }
 }
 
-.form__list svg {
+.form__list--tel svg {
   position: absolute;
-  top: 16px;
-  right: 18px;
+  top: 11px;
+  right: 8px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.form__list--mail svg {
+  position: absolute;
+  top: 18px;
+  right: 4px;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -133,7 +151,7 @@
 .form__small-text {
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 
   @include font-face(400, 14px, 16px);
   color: $g-black;
@@ -165,17 +183,21 @@
 
   .form__search--wrapper {
     margin: 0;
-    padding: 50px;
+    padding: 50px 50px 48px;
 
     &:last-of-type {
       margin-bottom: 0;
     }
   }
 
+  .form__search--wrapper textarea {
+    margin-top: 0;
+  }
+
   .form__wrapper-color {
     background-color: $w-gray;
     padding-top: 50px;
-    padding-bottom: 26px;
+    padding-bottom: 10px;
   }
 
   .form__wrapper-color .form__search--wrapper {
@@ -200,9 +222,26 @@
     font-family: "OpenSans", "Arial", sans-serif;
   }
 
+  .form__input-tel {
+    margin: 0;
+  }
+
+  .form__list--tel svg {
+    right: 26px;
+  }
+
+  .form__list--mail svg {
+    right: 23px;
+  }
+
   .form__list {
     display: flex;
     margin-bottom: 24px;
+  }
+
+
+  .form__list--textarea {
+    margin-bottom: 0;
   }
 
   .form__wrapper-button {
@@ -210,6 +249,7 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    margin-top: 5px;
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -224,6 +264,7 @@
     margin: 0;
 
     @include font-face(400, 17px, 30px);
+    letter-spacing: 0.5px;
   }
 }
 

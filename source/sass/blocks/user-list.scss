@@ -17,6 +17,7 @@
   text-decoration: none;
 
   @include font-face(700, 17px, 24px);
+  letter-spacing: 0.7px;
   color: $black;
 
   &:hover {
@@ -35,6 +36,16 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+    padding-left: 15px;
+
+    svg {
+      position: absolute;
+      left: -31px;
+    }
   }
 }
 
@@ -62,7 +73,7 @@
 
   .user-list__link {
     display: flex;
-    margin-left: 30px;
+    margin-left: 32px;
   }
 
   .user-list__span {
@@ -80,5 +91,9 @@
 
   .user-list__item {
     min-height: 89px;
+  }
+
+  .user-list__link {
+    margin-left: 34px;
   }
 }

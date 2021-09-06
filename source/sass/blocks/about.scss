@@ -4,7 +4,7 @@
 
 .about__wrapper {
   margin: 0 auto;
-  padding: 30px 30px 0;
+  padding: 39px 30px 0;
   max-width: 365px;
 }
 
@@ -13,6 +13,7 @@
   margin: 0;
 
   @include font-face(700, 25px, 30px);
+  letter-spacing: 0.9px;
 }
 
 .about__advantages-list {
@@ -22,11 +23,14 @@
 @media (min-width: $tablet-width) {
   .about__wrapper {
     min-width: 668px;
-    padding: 42px 50px 0;
+    padding: 63px 50px 0;
   }
 
   .about__title {
+    margin-bottom: 3px;
+
     @include font-face(700, 43px, 50px);
+    letter-spacing: 1.5px;
   }
 }
 
@@ -38,7 +42,9 @@
 
   .about__title {
     margin-left: 175px;
+    margin-bottom: 0;
 
-    @include font-face(700, 43px, 50px);
+    @include font-face(700, 53px, 57px);
+    letter-spacing: 2px;
   }
 }

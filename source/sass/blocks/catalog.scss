@@ -16,9 +16,14 @@
 .catalog__item {
   margin-bottom: 30px;
   list-style: none;
+  border: 1px solid $n-white;
 
-  &:last-child {
-    margin-bottom: 0;
+  &:hover {
+    box-shadow: 0 6px 10px $o-black;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px $o-black;
   }
 }
 
@@ -28,15 +33,19 @@
 
 @media (min-width: $tablet-width) {
   .catalog__wrapper {
-    padding: 79px 50px 53px;
+    padding: 79px 50px 5px;
     max-width: 668px;
     margin: 0 auto;
+  }
+
+  .catalog__item {
+    margin-bottom: 50px;
   }
 }
 
 @media (min-width: $desctop-width) {
   .catalog__wrapper {
-    padding: 128px 50px 57px;
+    padding: 128px 50px 37px;
     max-width: 1050px;
   }
 
@@ -46,8 +55,8 @@
   }
 
   .catalog__item {
-    margin-bottom: 0;
-    margin-right: 51px;
+    margin-right: 48px;
+    margin-bottom: 20px;
 
     &:nth-child(3n+3) {
       margin-right: 0;

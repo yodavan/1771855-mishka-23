@@ -22,7 +22,7 @@
     content: "";
     position: absolute;
     top: 32px;
-    right: 33px;
+    right: 30px;
     width: 21px;
     height: 14px;
     background-image: url("../img/header/burger-menu.svg");
@@ -44,8 +44,8 @@
     &::after {
       content: "";
       position: absolute;
-      top: 29px;
-      right: 45px;
+      top: 26px;
+      right: 39px;
       width: 2px;
       height: 25px;
       background-color: $black;

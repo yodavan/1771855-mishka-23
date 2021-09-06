@@ -9,8 +9,12 @@
   <body class="page-body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo" href="index.html" aria-label="Переход на главную">
-          <img src="img/logo/mishka-logo-mobile.svg" alt="Логотип" width="86" height="35" >
+        <a class="page-header__logo page-header__logo--link" href="index.html" aria-label="Переход на главную">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
+            <img src="img/logo/mishka-logo-mobile.svg" alt="Логотип" width="86" height="35">
+          </picture>
         </a>
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__dropdown" type="button">
@@ -22,7 +26,7 @@
                 <a class="site-list__link" href="catalog.html">Каталог товаров</a>
               </li>
               <li class="site-list__item site-list__item--active">
-                <a class="site-list__link">Вязание на заказ</a>
+                <a class="site-list__link site-list__link--no_link">Вязание на заказ</a>
               </li>
             </ul>
             <ul class="main-nav__list main-nav__inner user-list">
@@ -137,7 +141,7 @@
             <div class="form__wrapper-color">
               <fieldset class="form__search form__search--wrapper">
                 <legend class="form__legend">тел</legend>
-                <div class="form__list" tabindex="0">
+                <div class="form__list form__list--tel" tabindex="0">
                   <label class="visually-hidden" for="form_your_tel">Введите ваш номер телефона</label>
                   <input class="form__input-tel" type="tel" name="form_your_tel" id="form_your_tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
                   <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -152,7 +156,7 @@
               </fieldset>
               <fieldset class="form__search form__search--wrapper">
                 <legend class="form__legend">E-mail</legend>
-                <div class="form__list">
+                <div class="form__list form__list--mail">
                   <label class="visually-hidden" for="form_your_mail">Введите ваш E-mail</label>
                   <input class="form__input-mail" type="email" name="form_your_mail" id="form_your_mail" placeholder="Ваш Email*">
                   <svg width="32" height="21" viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -163,7 +167,7 @@
             </div>
             <fieldset class="form__search form__search--wrapper">
               <legend class="form__legend">Доп</legend>
-              <div class="form__list">
+              <div class="form__list form__list--textarea">
                 <label class="visually-hidden" for="form_additional_information">Поле ввода дополнительной информации по заказу</label>
                 <textarea name="form_additional_information" id="form_additional_information" cols="30" rows="7" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </div>
