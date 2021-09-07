@@ -27,5 +27,13 @@
     @include font-face(700, 15px, 24px);
     letter-spacing: 0.5px;
     color: $black;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

@@ -116,12 +116,7 @@
 
   .product-video__clip-wrapper {
     grid-row: 1 / 2;
-    min-height: 455px;
-    background: url("../img/catalog/video-tablet.jpg") no-repeat;
-  }
-
-  .product-video__clip-wrapper img {
-    display: none;
+    height: 455px;
   }
 
   .product-video__column-wrapper {
@@ -173,10 +168,8 @@
   .product-video__clip-wrapper {
     grid-row: 1 / -1;
     grid-column: 1 / 4;
-    min-width: 681px;
-    min-height: 455px;
+    width: 681px;
     margin-bottom: 0;
-    background: url("../img/catalog/video-desktop.jpg") no-repeat;
   }
 
   .product-video__column-wrapper {

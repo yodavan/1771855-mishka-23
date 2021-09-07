@@ -110,24 +110,8 @@
   }
 
   .product__image-wrapper {
-    min-width: 334px;
-    min-height: 334px;
-  }
-
-  .catalog__item:first-of-type .product__image-wrapper {
-    background: url("../img/catalog/bunny-tablet.jpg") no-repeat;
-  }
-
-  .catalog__item:nth-of-type(2) .product__image-wrapper {
-    background: url("../img/catalog/photo-2-tablet.jpg") no-repeat;
-  }
-
-  .catalog__item:nth-of-type(3) .product__image-wrapper {
-    background: url("../img/catalog/photo-3-tablet.jpg") no-repeat;
-  }
-
-  .product__image-wrapper img {
-    display: none;
+    width: 334px;
+    height: 334px;
   }
 
   .product__details-wrapper {
@@ -156,20 +140,12 @@
   }
 
   .product__image-wrapper {
-    min-width: 316px;
-    min-height: 462px;
+    width: 316px;
+    height: 462px;
   }
 
-  .catalog__item:first-of-type .product__image-wrapper {
-    background: url("../img/catalog/bunny-desktop.jpg") no-repeat;
-  }
-
-  .catalog__item:nth-of-type(2) .product__image-wrapper {
-    background: url("../img/catalog/photo-2-desktop.jpg") no-repeat;
-  }
-
-  .catalog__item:nth-of-type(3) .product__image-wrapper {
-    background: url("../img/catalog/photo-3-desktop.png") no-repeat;
+  .product__image-wrapper img {
+    object-position: -1px 0;
   }
 
   .product__details-wrapper {

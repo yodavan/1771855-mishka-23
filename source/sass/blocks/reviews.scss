@@ -117,7 +117,12 @@
       top: 68px;
       width: 350px;
       height: 457px;
-      background: url("../img/index/reviews/background.jpg");
+      background: url("../img/index/reviews/background.jpg") no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/index/reviews/background@2x.jpg") no-repeat;
+        background-size: 700px auto;
+      }
     }
 
     &::after {

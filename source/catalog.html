@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Каталог товаров | Мишка</title>
   </head>
   <body class="page-body">
@@ -78,7 +78,11 @@
               <article class="catalog__product product">
                 <a href="#" class="product__link">
                   <div class="product__image-wrapper">
-                    <img src="img/catalog/bunny-mobile.jpg" alt="Мягкая игрушка зайчик. Цвет головы: серый. Цвет одежки и лапок: голубой" width="260" height="195">
+                    <picture>
+                      <source media="(min-width: 1150px)" srcset="img/catalog/product/bunny-desktop.jpg 1x, img/catalog/product/bunny-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/product/bunny-tablet.jpg 1x, img/catalog/product/bunny-tablet@2x.jpg 2x">
+                      <img src="img/catalog/product/bunny-mobile.jpg" srcset="img/catalog/product/bunny-mobile@2x.jpg 2x" alt="Мягкая игрушка зайчик. Цвет головы: серый. Цвет одежки и лапок: голубой" width="260" height="195">
+                    </picture>
                   </div>
                 </a>
                 <div class="product__details-wrapper">
@@ -100,7 +104,11 @@
               <article class="catalog__product product">
                 <a href="#" class="product__link">
                   <div class="product__image-wrapper">
-                    <img src="img/catalog/photo-2-mobile.jpg" alt="Корзинка вязанная крючком двухцветная, снизу до середины розовый, а потом белый" width="260" height="195">
+                    <picture>
+                      <source media="(min-width: 1150px)" srcset="img/catalog/product/photo-2-desktop.jpg 1x, img/catalog/product/photo-2-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/product/photo-2-tablet.jpg 1x, img/catalog/product/photo-2-tablet@2x.jpg 2x">
+                      <img src="img/catalog/product/photo-2-mobile.jpg" srcset="img/catalog/product/photo-2-mobile@2x.jpg 2x" alt="Корзинка вязанная крючком двухцветная, снизу до середины розовый, а потом белый" width="260" height="195">
+                    </picture>
                   </div>
                 </a>
                 <div class="product__details-wrapper">
@@ -122,7 +130,11 @@
               <article class="catalog__product product">
                 <a href="#" class="product__link">
                   <div class="product__image-wrapper">
-                    <img src="img/catalog/photo-3-mobile.jpg" alt="Большая корзинка вязанная крючком двухцветная, снизу до середины салатовый, а потом белый" width="260" height="195">
+                    <picture>
+                      <source media="(min-width: 1150px)" srcset="img/catalog/product/photo-3-desktop.jpg 1x, img/catalog/product/photo-3-desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/product/photo-3-tablet.jpg 1x, img/catalog/product/photo-3-tablet@2x.jpg 2x">
+                      <img src="img/catalog/product/photo-3-mobile.jpg" srcset="img/catalog/product/photo-3-mobile@2x.jpg 2x" alt="Большая корзинка вязанная крючком двухцветная, снизу до середины салатовый, а потом белый" width="260" height="195">
+                    </picture>
                   </div>
                 </a>
                 <div class="product__details-wrapper">
@@ -151,7 +163,11 @@
               <article class="production__product-video product-video">
                 <h3 class="product-video__title">Процесс производства</h3>
                 <div class="product-video__clip-wrapper">
-                  <img src="img/catalog/video-mobile.jpg" alt="Двух цветная корзинка вязанная крючком. С низу до середины цвет серый, потом зеленый" width="260" height="150">
+                  <picture>
+                    <source media="(min-width: 1150px)" srcset="img/catalog/product-video/video-desktop.jpg 1x, img/catalog/product-video/video-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/product-video/video-tablet.jpg 1x, img/catalog/product-video/video-tablet@2x.jpg 2x">
+                    <img src="img/catalog/product-video/video-mobile.jpg" srcset="img/catalog/product-video/video-mobile@2x.jpg 2x" alt="Двух цветная корзинка вязанная крючком. С низу до середины цвет серый, потом зеленый" width="260" height="150">
+                  </picture>
                   <button type="button"><span class="visually-hidden">Смотреть видео</span></button>
                 </div>
                 <div class="product-video__column-wrapper">
@@ -233,6 +249,6 @@
         <button class="modal__button">Добавить</button>
       </form>
     </section>
-    <script src="js/main-nav.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
