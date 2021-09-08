@@ -1,22 +1,24 @@
 .product {
   width: 100%;
+}
+
+.product__link--text {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  text-decoration: none;
+  color: $black;
 
   &:hover {
-    box-shadow: 0 6px 10px $o-black;
+    opacity: 0.6;
   }
 
   &:active {
-    box-shadow: 0 3px 5px $o-black;
+    opacity: 0.3;
   }
 }
 
-.product__link {
-  text-decoration: none;
-  color: $black;
-}
-
 .product__image-wrapper {
-  min-width: 260px;
+  min-width: 258px;
   min-height: 195px;
   background-color: $w-gray;
 }
@@ -33,19 +35,16 @@
   grid-template-rows: min-content 1fr min-content;
   min-width: 202px;
   min-height: 121px;
-  padding: 28px;
-  border: 1px solid $n-white;
-  border-top: none;
+  padding: 28px 28px 25px;
 }
 
 .product__title {
-  grid-column: 1 / -1;
-  grid-row: 1 / 2;
   padding: 0;
   margin: 0;
   margin-bottom: 5px;
 
   @include font-face(700, 17px, 24px);
+  letter-spacing: 0.8px;
 }
 
 .product__text {
@@ -85,7 +84,7 @@
   &:hover {
     stroke-width: 4;
 
-    path {
+    .product__cart {
       fill: $l-green;
       opacity: 1;
       pointer-events: stroke;
@@ -95,10 +94,16 @@
   &:active {
     stroke-width: 4;
 
-    path {
+    .product__cart {
       opacity: 0.3;
     }
   }
+}
+
+.product__cart {
+  margin-left: 6px;
+  fill: $black;
+  opacity: 0.2;
 }
 
 @media (min-width: $tablet-width) {
@@ -107,32 +112,14 @@
   }
 
   .product__image-wrapper {
-    min-width: 334px;
-    min-height: 334px;
-  }
-
-  .catalog__item:first-of-type .product__image-wrapper {
-    background: url("../img/catalog/bunny-tablet.jpg") no-repeat;
-  }
-
-  .catalog__item:nth-of-type(2) .product__image-wrapper {
-    background: url("../img/catalog/photo-2-tablet.jpg") no-repeat;
-  }
-
-  .catalog__item:nth-of-type(3) .product__image-wrapper {
-    background: url("../img/catalog/photo-3-tablet.jpg") no-repeat;
-  }
-
-  .product__image-wrapper img {
-    display: none;
+    width: 334px;
+    height: 334px;
   }
 
   .product__details-wrapper {
     width: 266px;
     min-height: 281px;
     padding: 27px 33px 25px;
-    border: 1px solid $n-white;
-    border-left: none;
   }
 
   .product__title {
@@ -145,7 +132,7 @@
   }
 
   .product__price {
-    @include font-face(700, 15px, 24px);
+    @include font-face(700, 17px, 24px);
   }
 }
 
@@ -155,28 +142,18 @@
   }
 
   .product__image-wrapper {
-    min-width: 316px;
-    min-height: 462px;
+    width: 316px;
+    height: 462px;
   }
 
-  .catalog__item:first-of-type .product__image-wrapper {
-    background: url("../img/catalog/bunny-desktop.jpg") no-repeat;
-  }
-
-  .catalog__item:nth-of-type(2) .product__image-wrapper {
-    background: url("../img/catalog/photo-2-desktop.jpg") no-repeat;
-  }
-
-  .catalog__item:nth-of-type(3) .product__image-wrapper {
-    background: url("../img/catalog/photo-3-desktop.png") no-repeat;
+  .product__image-wrapper img {
+    object-position: -1px 0;
   }
 
   .product__details-wrapper {
     width: 262px;
     min-height: 145px;
-    padding: 26px;
-    border: 1px solid $n-white;
-    border-top: none;
+    padding: 26px 26px 20px;
   }
 
   .product__title {
@@ -189,6 +166,10 @@
   }
 
   .product__price {
-    @include font-face(700, 15px, 24px);
+    @include font-face(700, 17px, 24px);
+  }
+
+  .product__button svg {
+    margin: 0;
   }
 }

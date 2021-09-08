@@ -9,30 +9,55 @@
 }
 
 .search-site__button {
+  position: relative;
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 0;
   border: none;
+  letter-spacing: 0.7px;
   background-color: $white;
   cursor: pointer;
 
   &:hover {
     stroke-width: 4;
 
-    path {
+    .search-site__search-icon {
       fill: $l-green;
       opacity: 1;
       pointer-events: stroke;
+    }
+
+    span {
+      opacity: 0.6;
     }
   }
 
   &:active {
     opacity: 0.3;
   }
+
+  @media (max-width: $mobile-width-only) {
+    width: 170px;
+    text-align: left;
+
+    svg {
+      position: absolute;
+      left: -43px;
+    }
+  }
+}
+
+.search-site__search-icon {
+  fill: $black;
+  opacity: 0.2;
 }
 
 @media (min-width: $tablet-width) {
   .search-site__span-hidden {
     display: none;
+  }
+
+  .search-site__button {
+    padding: 10px;
   }
 }

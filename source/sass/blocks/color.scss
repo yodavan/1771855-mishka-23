@@ -1,18 +1,18 @@
 .color {
   padding: 0;
   margin: 0;
+  margin-bottom: 15px;
 }
 
 .color__item {
   display: flex;
   align-items: center;
   min-height: 38px;
-  margin-left: 61px;
   margin-bottom: 23px;
   list-style: none;
 
   &:first-of-type {
-    margin-top: 35px;
+    margin-top: 22px;
   }
 
   &:last-of-type {
@@ -22,13 +22,14 @@
 
 .color__item label {
   position: relative;
+  padding-left: 61px;
   cursor: pointer;
 }
 
 .color__input + label::before {
   content: "";
   position: absolute;
-  left: -61px;
+  left: 0;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -41,6 +42,11 @@
   border: 1px solid $n-green;
 }
 
+.color__input:focus + label::before {
+  outline: none;
+  box-shadow: 0 0 0 1px $n-green;
+}
+
 .color__input:active + label::before {
   border: 1px solid $od-black;
 }
@@ -49,7 +55,7 @@
 .color__input:checked + label::after {
   content: "";
   position: absolute;
-  left: -54px;
+  left: 8px;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -65,9 +71,9 @@
   }
 
   .color__item {
-    width: 135px;
+    width: 210px;
     min-height: 52px;
-    margin: 0 15px 24px 82px;
+    margin: 0 52px 24px 0;
 
     &:first-of-type {
       margin-top: 0;
@@ -76,17 +82,24 @@
     &:last-of-type {
       margin-bottom: 24px;
     }
+
+    &:nth-child(2n + 2) {
+      margin-right: 0;
+    }
+  }
+
+  .color__item label {
+    padding-left: 82px;
   }
 
   .color__input + label::before {
     content: "";
-    left: -82px;
     width: 50px;
     height: 50px;
   }
 
   .color__input:checked + label::after {
-    left: -72px;
+    left: 10px;
     width: 32px;
     height: 22px;
   }

@@ -8,11 +8,10 @@
   align-items: center;
   min-height: 42px;
   margin-bottom: 11px;
-  margin-left: 61px;
   list-style: none;
 
   &:first-of-type {
-    margin-top: 42px;
+    margin-top: 30px;
   }
 
   &:last-of-type {
@@ -22,6 +21,7 @@
 
 .type__item label {
   position: relative;
+  padding-left: 61px;
   cursor: pointer;
 }
 
@@ -32,7 +32,7 @@
 .type__input + label::before {
   content: "";
   position: absolute;
-  left: -61px;
+  left: 0;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -46,6 +46,11 @@
   border: 1px solid $n-green;
 }
 
+.type__input:focus + label::before {
+  outline: none;
+  box-shadow: 0 0 0 1px $n-green;
+}
+
 .type__input:active + label::before {
   border: 1px solid $od-black;
 }
@@ -53,7 +58,7 @@
 .type__input:checked + label::after {
   content: "";
   position: absolute;
-  left: -49px;
+  left: 12px;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -70,7 +75,6 @@
 
   .type__item {
     min-height: 52px;
-    margin-left: 78px;
     margin-bottom: 24px;
 
     &:first-of-type {
@@ -78,14 +82,17 @@
     }
   }
 
+  .type__item label {
+    padding-left: 78px;
+  }
+
   .type__input + label::before {
-    left: -78px;
     width: 50px;
     height: 50px;
   }
 
   .type__input:checked + label::after {
-    left: -63px;
+    left: 15px;
     width: 23px;
     height: 23px;
   }

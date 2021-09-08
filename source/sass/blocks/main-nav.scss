@@ -1,75 +1,91 @@
 .main-nav {
-  position: absolute;
-  left: 0;
-  width: 100%;
+  position: relative;
+  min-height: 79px;
   color: $black;
 }
 
-.main-nav__wrapper {
-  display: grid;
-  grid-template-rows: 79px auto auto;
-  max-width: 425px;
-  min-height: 79px;
-  margin: 0 auto;
-}
-
 .main-nav__dropdown {
-  justify-self: end;
-  align-self: center;
-  width: 20px;
-  height: 14px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55px;
+  height: 79px;
   padding: 0;
-  margin-right: 31px;
+  margin-right: 0;
   border: none;
   background-color: $white;
   cursor: pointer;
 }
 
-.main-nav__dropdown-closed {
-  position: relative;
-  justify-self: end;
-  align-self: center;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  margin-right: 31px;
-  border: none;
-  background-color: $white;
-  cursor: pointer;
-
-  &::before,
-  &::after {
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__dropdown::before {
     content: "";
     position: absolute;
-    left: 10px;
-    bottom: 0;
-    width: 2px;
-    height: 24px;
-    background-color: $black;
+    top: 32px;
+    right: 30px;
+    width: 21px;
+    height: 14px;
+    background-image: url("../img/header/burger-menu.svg");
   }
 
-  &::before {
-    transform: rotate(45deg);
+  .main-nav--closed .main-nav__list {
+    display: none;
   }
 
-  &::after {
-    transform: rotate(-45deg);
+  .main-nav--opened .main-nav__wrapper {
+    position: absolute;
+    top: 79px;
+    left: 0;
+    width: 100%;
   }
-}
 
-.main-nav--closed {
-  display: none;
-}
+  .main-nav--opened .main-nav__dropdown {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 26px;
+      right: 39px;
+      width: 2px;
+      height: 25px;
+      background-color: $black;
+    }
 
-.main-nav--nojs {
-  position: static;
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .main-nav--opened .main-nav__list {
+    display: block;
+  }
+
+  .main-nav--nojs {
+    padding-top: 79px;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+  }
+
+  .main-nav--nojs .main-nav__dropdown {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .main-nav__wrapper {
     display: flex;
     flex-direction: column-reverse;
-    max-width: 668px;
+    max-width: 900px;
     min-height: 89px;
     padding: 0 50px;
     margin: 0 auto;
@@ -85,6 +101,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 1050px;
+    max-width: 1300px;
   }
 }

@@ -1,6 +1,7 @@
 .user-name {
   padding: 0;
   margin: 0;
+  margin-bottom: 5px;
 }
 
 .user-name__item {
@@ -52,7 +53,7 @@
   .user-name__item {
     display: flex;
     align-items: center;
-    margin-bottom: 21px;
+    margin-bottom: 23px;
     list-style: none;
 
     &:first-of-type {
@@ -63,10 +64,10 @@
   .user-name__item label {
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-right: 25px;
   }
 
   .user-name__input {
-    margin-left: 25px;
     padding-left: 18px;
     padding-right: 18px;
   }

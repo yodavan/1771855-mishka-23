@@ -32,24 +32,28 @@
   align-items: center;
   text-decoration: none;
   color: $black;
+  letter-spacing: 0.5px;
 
   &:hover {
     stroke-width: 4;
 
-    path {
+    .page-footer__icon-htmlacademy {
       fill: $dd-green;
     }
   }
 
   &:active {
-    path {
+    stroke-width: 4;
+
+    .page-footer__icon-htmlacademy {
       opacity: 0.3;
     }
   }
 }
 
-.page-footer__link svg {
+.page-footer__icon-htmlacademy {
   margin-left: 27px;
+  fill: $l-green;
 }
 
 @media (min-width: $tablet-width) {
@@ -59,7 +63,7 @@
     align-items: center;
     min-height: 143px;
     min-width: 668px;
-    max-width: 1050px;
+    max-width: 1200px;
     padding: 0 50px;
   }
 
@@ -67,17 +71,19 @@
     display: block;
     width: 101px;
     height: 34px;
+  }
 
+  .page-footer__logo-footer {
+    fill: $black;
+  }
+
+  .page-footer__logo-footer--active {
     &:hover {
-      stroke-width: 4;
+      fill: $dd-green;
+    }
 
-      path {
-        fill: $dd-green;
-      }
-
-      &:active {
-        opacity: 0.3;
-      }
+    &:active {
+      opacity: 0.3;
     }
   }
 

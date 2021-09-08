@@ -16,6 +16,7 @@
   margin: 0;
 
   @include font-face(700, 27px, 30px);
+  letter-spacing: 1px;
 }
 
 @media (min-width: $tablet-width) {
@@ -26,17 +27,20 @@
     &::before {
       content: "";
       position: absolute;
-      width: 100%;
-      height: 24px;
       left: 0;
-      bottom: -12px;
+      bottom: 0;
+      width: 100%;
+      height: 12px;
       background-image: url("../img/catalog/intro/zigzag-fill-desktop.svg");
       background-size: cover;
     }
   }
 
   .intro__title-bold {
+    margin-top: 25px;
+
     @include font-face(700, 43px, 50px);
+    letter-spacing: 1.5px;
   }
 }
 
@@ -45,12 +49,14 @@
     min-height: 255px;
 
     &::before {
-      height: 34px;
-      bottom: -17px;
+      height: 17px;
     }
   }
 
   .intro__title-bold {
+    margin-top: 10px;
+
     @include font-face(700, 53px, 57px);
+    letter-spacing: 2.2px;
   }
 }
