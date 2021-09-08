@@ -84,7 +84,7 @@
   &:hover {
     stroke-width: 4;
 
-    path {
+    .product__cart {
       fill: $l-green;
       opacity: 1;
       pointer-events: stroke;
@@ -94,14 +94,16 @@
   &:active {
     stroke-width: 4;
 
-    path {
+    .product__cart {
       opacity: 0.3;
     }
   }
 }
 
-.product__button svg {
+.product__cart {
   margin-left: 6px;
+  fill: $black;
+  opacity: 0.2;
 }
 
 @media (min-width: $tablet-width) {
