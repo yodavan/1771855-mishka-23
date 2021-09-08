@@ -21,10 +21,14 @@
   &:hover {
     stroke-width: 4;
 
-    path {
+    .search-site__search-icon {
       fill: $l-green;
       opacity: 1;
       pointer-events: stroke;
+    }
+
+    span {
+      opacity: 0.6;
     }
   }
 
@@ -41,6 +45,11 @@
       left: -43px;
     }
   }
+}
+
+.search-site__search-icon {
+  fill: $black;
+  opacity: 0.2;
 }
 
 @media (min-width: $tablet-width) {

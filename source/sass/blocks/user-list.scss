@@ -23,7 +23,7 @@
   &:hover {
     stroke-width: 4;
 
-    path {
+    .user-list__cart {
       fill: $l-green;
       opacity: 1;
       pointer-events: stroke;
@@ -36,6 +36,11 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  .user-list__cart {
+    fill: $black;
+    opacity: 0.2;
   }
 
   @media (max-width: $mobile-width-only) {
