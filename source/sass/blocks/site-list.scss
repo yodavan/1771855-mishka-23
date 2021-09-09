@@ -21,7 +21,6 @@
   text-decoration: none;
 
   @include font-face(700, 17px, 24px);
-  letter-spacing: 0.7px;
   color: $black;
 
   &:hover {
@@ -67,11 +66,10 @@
 
   .site-list__link {
     @include font-face(700, 15px, 24px);
-    letter-spacing: 0.7px;
   }
 }
 
-@media (min-width: $desctop-width) {
+@media (min-width: $desktop-width) {
   .site-list {
     min-width: 50%;
   }

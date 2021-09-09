@@ -5,7 +5,7 @@
 .reviews__wrapper {
   position: relative;
   margin: 0 auto;
-  padding: 56px 30px 45px;
+  padding: 57px 30px 45px;
   max-width: 365px;
 
   &::after {
@@ -26,7 +26,6 @@
   margin-bottom: 14px;
 
   @include font-face(700, 25px, 30px);
-  letter-spacing: 0.5px;
   color: $black;
 }
 
@@ -42,20 +41,18 @@
 .reviews__text {
   padding: 0;
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 34px;
 
   @include font-face(400, 15px, 30px);
-  letter-spacing: 0.4px;
 }
 
 .reviews__cite {
   display: block;
   width: 284px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   font-style: normal;
 
   @include font-face(700, 17px, 24px);
-  letter-spacing: 0.5px;
 }
 
 .reviews__nick-name {
@@ -78,8 +75,8 @@
   @include font-face(700, 18px, 20px);
 }
 
-.toggle-right,
-.toggle-left {
+.reviews__toggle-right,
+.reviews__toggle-left {
   flex-grow: 1;
   height: 52px;
   margin: 0;
@@ -97,7 +94,7 @@
   }
 }
 
-.toggle-left {
+.reviews__toggle-left {
   border-right: none;
 }
 
@@ -140,7 +137,6 @@
     margin-bottom: 16px;
 
     @include font-face(700, 43px, 50px);
-    letter-spacing: 1.5px;
   }
 
   .reviews__list {
@@ -157,7 +153,11 @@
   }
 
   .reviews__text br {
-    display: none;
+    content: "";
+  }
+
+  .reviews__text br::after {
+    content: "\00a0";
   }
 
   .reviews__cite {
@@ -187,8 +187,8 @@
     @include font-face(700, 17px, 20px);
   }
 
-  .toggle-right,
-  .toggle-left {
+  .reviews__toggle-right,
+  .reviews__toggle-left {
     width: 50px;
     height: 26px;
 
@@ -196,16 +196,16 @@
     border: none;
   }
 
-  .toggle-left {
+  .reviews__toggle-left {
     margin-right: 15px;
   }
 
-  .toggle-right {
+  .reviews__toggle-right {
     margin-right: 10px;
   }
 }
 
-@media (min-width: $desctop-width) {
+@media (min-width: $desktop-width) {
   .reviews__wrapper {
     grid-template-columns: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
     grid-template-rows: auto 1fr;
@@ -229,7 +229,7 @@
   .reviews__title {
     grid-column: 2 / 4;
     margin-top: 70px;
-    margin-bottom: 38px;
+    margin-bottom: 36px;
 
     @include font-face(700, 53px, 57px);
   }
@@ -242,23 +242,23 @@
   }
 
   .reviews__text {
-    width: 810px;
     margin-bottom: 41px;
+  }
 
-    @include font-face(400, 17px, 30px);
+  .reviews__text br:first-of-type {
+    content: none;
   }
 
   .reviews__cite {
     font-style: normal;
 
-    @include font-face(700, 18px, 24px);
-    letter-spacing: normal;
+    @include font-face(700, 17px, 30px);
   }
 
   .reviews__nick-name {
     display: block;
 
-    @include font-face(400, 17px, 30px);
+    @include font-face(400, 17px, 24px);
   }
 
   .reviews__toggles {
@@ -270,8 +270,8 @@
     height: 26px;
   }
 
-  .toggle-left,
-  .toggle-right {
+  .reviews__toggle-left,
+  .reviews__toggle-right {
     margin: 0;
   }
 

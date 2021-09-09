@@ -4,7 +4,7 @@
 
 .about__wrapper {
   margin: 0 auto;
-  padding: 39px 30px 0;
+  padding: 37px 30px 0;
   max-width: 365px;
 }
 
@@ -13,7 +13,6 @@
   margin: 0;
 
   @include font-face(700, 25px, 30px);
-  letter-spacing: 0.9px;
 }
 
 .about__advantages-list {
@@ -30,11 +29,10 @@
     margin-bottom: 3px;
 
     @include font-face(700, 43px, 50px);
-    letter-spacing: 1.5px;
   }
 }
 
-@media (min-width: $desctop-width) {
+@media (min-width: $desktop-width) {
   .about__wrapper {
     min-width: 1050px;
     padding-top: 80px;
@@ -45,6 +43,5 @@
     margin-bottom: 0;
 
     @include font-face(700, 53px, 57px);
-    letter-spacing: 2px;
   }
 }

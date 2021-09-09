@@ -44,7 +44,6 @@
   margin-bottom: 5px;
 
   @include font-face(700, 17px, 24px);
-  letter-spacing: 0.8px;
 }
 
 .product__text {
@@ -136,7 +135,7 @@
   }
 }
 
-@media (min-width: $desctop-width) {
+@media (min-width: $desktop-width) {
   .product {
     display: block;
   }

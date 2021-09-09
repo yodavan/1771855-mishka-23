@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media (min-width: $desctop-width) {
+@media (min-width: $desktop-width) {
   .additional-list {
     display: flex;
     min-height: 43px;
@@ -25,7 +25,6 @@
     text-decoration: none;
 
     @include font-face(700, 15px, 24px);
-    letter-spacing: 0.5px;
     color: $black;
 
     &:hover {

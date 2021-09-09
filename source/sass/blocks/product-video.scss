@@ -74,7 +74,7 @@
 }
 
 .product-video__column-wrapper {
-  padding: 39px 34px 32px;
+  padding: 39px 32px 32px;
 }
 
 .product-video__text {
@@ -106,7 +106,6 @@
     min-height: 24px;
 
     @include font-face(700, 20px, 24px);
-    letter-spacing: 0.5px;
 
     &::before {
       left: -65px;
@@ -131,7 +130,6 @@
     margin-bottom: 40px;
 
     @include font-face(400, 15px, 30px);
-    letter-spacing: 0.4px;
   }
 
   .product-video__button-link {
@@ -141,7 +139,7 @@
   }
 }
 
-@media (min-width: $desctop-width) {
+@media (min-width: $desktop-width) {
   .product-video {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
@@ -152,7 +150,7 @@
     display: block;
     grid-column: -4 / -1;
     grid-row: 1 / 2;
-    margin: 96px 60px 25px 80px;
+    margin: 98px 60px 25px 80px;
     padding: 0;
     min-height: 24px;
 

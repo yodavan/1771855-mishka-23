@@ -8,7 +8,6 @@
   margin-bottom: 29px;
 
   @include font-face(400, 13px, 24px);
-  letter-spacing: 0.5px;
 }
 
 .form__search {
@@ -197,6 +196,10 @@
     padding-bottom: 10px;
   }
 
+  .form__search--wrapper-color {
+    max-width: 700px;
+  }
+
   .form__wrapper-color .form__search--wrapper {
     padding-top: 0;
     padding-bottom: 0;
@@ -261,11 +264,10 @@
     margin: 0;
 
     @include font-face(400, 17px, 30px);
-    letter-spacing: 0.5px;
   }
 }
 
-@media (min-width: $desctop-width) {
+@media (min-width: $desktop-width) {
   .form__text {
     padding-left: 225px;
     padding-right: 223px;
@@ -286,10 +288,20 @@
     margin: 0 auto;
   }
 
+  .form__search--wrapper-color {
+    padding-right: 90px;
+    margin-left: 0;
+    max-width: 900px;
+  }
+
   .form__legend {
-    float: left;
-    min-width: 130px;
-    padding-right: 0;
+    min-width: 104px;
+    margin-left: 13px;
+    margin-right: 13px;
+  }
+
+  .form__legend-type {
+    margin-top: 30px;
   }
 
   .form__input-tel {
@@ -303,6 +315,14 @@
 
     @include font-face(400, 17px, 18px);
     font-family: "OpenSans", "Arial", sans-serif;
+  }
+
+  .form__list--tel svg {
+    right: 9px;
+  }
+
+  .form__list--mail svg {
+    right: 4px;
   }
 
   .form__wrapper-button {

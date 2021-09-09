@@ -104,3 +104,15 @@
     height: 22px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .color__item {
+    &:nth-child(2n + 2) {
+      margin-right: 52px;
+    }
+
+    &:nth-child(3n + 3) {
+      margin-right: 0;
+    }
+  }
+}

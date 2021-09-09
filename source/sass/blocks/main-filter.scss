@@ -12,3 +12,9 @@
     padding: 66px 0 50px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main-filter__wrapper {
+    padding: 116px 0 50px;
+  }
+}

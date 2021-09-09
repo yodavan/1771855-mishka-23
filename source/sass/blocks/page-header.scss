@@ -72,11 +72,10 @@
     max-width: 259px;
 
     @include font-face(400, 15px, 24px);
-    letter-spacing: 0.3px;
   }
 }
 
-@media (min-width: $desctop-width) {
+@media (min-width: $desktop-width) {
   .page-header {
     min-width: 1150px;
     max-width: 1300px;

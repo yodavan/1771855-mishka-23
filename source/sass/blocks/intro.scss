@@ -16,7 +16,6 @@
   margin: 0;
 
   @include font-face(700, 27px, 30px);
-  letter-spacing: 1px;
 }
 
 @media (min-width: $tablet-width) {
@@ -40,11 +39,10 @@
     margin-top: 25px;
 
     @include font-face(700, 43px, 50px);
-    letter-spacing: 1.5px;
   }
 }
 
-@media (min-width: $desctop-width) {
+@media (min-width: $desktop-width) {
   .intro__wrapper-color {
     min-height: 255px;
 
@@ -54,9 +52,8 @@
   }
 
   .intro__title-bold {
-    margin-top: 10px;
+    margin-top: 5px;
 
     @include font-face(700, 53px, 57px);
-    letter-spacing: 2.2px;
   }
 }
