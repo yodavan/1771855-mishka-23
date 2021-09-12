@@ -61,6 +61,8 @@
   padding-right: 20px;
   text-transform: uppercase;
   color: $l-green;
+
+  @include font-face(700, 17px, 16px);
 }
 
 .form__input-tel,
@@ -84,11 +86,12 @@
 }
 
 .form__input-tel {
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 .form__input-mail {
   margin-bottom: 20px;
+  margin-top: 5px;
 }
 
 .form__list {
@@ -154,7 +157,6 @@
 }
 
 .form__button-link {
-  padding: 0;
   margin: 0;
   width: 100%;
 
@@ -188,6 +190,9 @@
 
   .form__search--wrapper textarea {
     margin-top: 0;
+    padding-top: 13px;
+
+    @include font-face(400, 19px, 18px);
   }
 
   .form__wrapper-color {
@@ -207,9 +212,10 @@
 
   .form__legend {
     float: left;
-    min-width: 167px;
+    width: 154px;
     padding-right: 0;
     margin-top: 16px;
+    margin-right: 13px;
   }
 
   .form__input-mail,
@@ -218,12 +224,15 @@
     padding-right: 18px;
     background-color: transparent;
 
-    @include font-face(400, 17px, 18px);
-    font-family: "OpenSans", "Arial", sans-serif;
+    @include font-face(400, 19px, 18px);
   }
 
   .form__input-tel {
     margin: 0;
+  }
+
+  .form__input-mail {
+    margin-top: 0;
   }
 
   .form__list--tel svg {
@@ -289,15 +298,14 @@
   }
 
   .form__search--wrapper-color {
-    padding-right: 90px;
-    margin-left: 0;
-    max-width: 900px;
+    padding-right: 180px;
+    max-width: 873px;
   }
 
   .form__legend {
-    min-width: 104px;
+    width: 104px;
     margin-left: 13px;
-    margin-right: 13px;
+    margin-top: 18px;
   }
 
   .form__legend-type {

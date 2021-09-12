@@ -3,9 +3,30 @@
 }
 
 .main-products__wrapper {
+  position: relative;
+  min-height: 489px;
   margin: 0 auto;
   border-top: 1px solid $o-black;
   background-color: #f9f9f9;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 373px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-image: url("../img/index/main-products/main-products_mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 -18px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/main-products/main-products_mobile@2x.jpg");
+      background-repeat: no-repeat;
+      background-size: 320px auto;
+    }
+  }
 }
 
 .main-products__title-bold {
@@ -24,19 +45,10 @@
   text-align: center;
 }
 
-.main-products__image {
-  margin: 0 auto;
-  height: 373px;
-  width: 320px;
-  background-color: $w-gray;
-}
-
-.main-products__image img {
-  object-fit: fill;
-  object-position: 0 -18px;
-}
-
 .main-products__categories-inner {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: -90px;
@@ -53,8 +65,7 @@
   & span {
     display: block;
     min-width: 130px;
-    margin-top: 23px;
-    margin-left: 30px;
+    margin: 23px 100px 10px 30px;
   }
 }
 
@@ -71,6 +82,7 @@
     height: 62px;
     opacity: 0.5;
     background-image: url("../img/index/main-products/interior.svg");
+    background-repeat: no-repeat;
   }
 
   &:hover {
@@ -101,6 +113,7 @@
     height: 60px;
     opacity: 0.5;
     background-image: url("../img/index/main-products/toy.svg");
+    background-repeat: no-repeat;
   }
 
   &:hover {
@@ -125,15 +138,32 @@
     min-width: 768px;
     margin: 0 auto;
 
+    &::before {
+      width: 768px;
+      height: 746px;
+      background-image: url("../img/index/main-products/hero-tablet.jpg");
+      background-position: 0 -2px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index/main-products/hero-tablet@2x.jpg");
+        background-size: 768px auto;
+      }
+    }
+
     &::after {
       content: "";
       position: absolute;
-      bottom: -1px;
+      bottom: 0;
       left: 0;
       width: 100%;
       height: 14px;
-      background: url("../img/index/main-products/zigzag-fill-desktop.svg") no-repeat;
+      background-image: url("../img/index/main-products/zigzag-fill-tablet.svg");
+      background-repeat: no-repeat;
       background-size: cover;
+
+      @media (min-width: $tablet_top-width) {
+        height: 17px;
+      }
     }
   }
 
@@ -147,28 +177,18 @@
     @include font-face(700, 43px, 50px);
   }
 
-  .main-products__image {
-    margin-bottom: -119px;
-    min-height: 746px;
-    min-width: 768px;
-  }
-
-  .main-products__image img {
-    width: 100%;
-    height: 100%;
-    object-position: 0 -2px;
-  }
-
   .main-products__categories-inner {
+    bottom: 1px;
+    left: 50%;
+    transform: translate(-50%);
     flex-direction: row;
-    margin-top: -121px;
-    padding-left: 50px;
-    padding-right: 50px;
+    align-items: flex-end;
+    height: 124px;
   }
 
   .main-products__categories {
     width: 100%;
-    min-height: 119px;
+    height: 119px;
 
     @include font-face(700, 20px, 30px);
 
@@ -179,16 +199,36 @@
   }
 
   .main-products__categories--interior {
+    margin-left: 50px;
+
     &::before {
       top: 30px;
       right: 37px;
     }
+
+    &:hover {
+      height: 124px;
+
+      span {
+        margin-top: 21px;
+      }
+    }
   }
 
   .main-products__categories--toy {
+    margin-right: 50px;
+
     &::before {
       top: 32px;
       right: 33px;
+    }
+
+    &:hover {
+      height: 124px;
+
+      span {
+        margin-top: 21px;
+      }
     }
   }
 }
@@ -199,10 +239,19 @@
     min-width: 1150px;
     margin: 0 auto;
 
+    &::before {
+      width: 1150px;
+      background-image: url("../img/index/main-products/hero-desktop.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index/main-products/hero-desktop@2x.jpg");
+        background-size: 1150px auto;
+      }
+    }
+
     &::after {
       height: 20px;
-      background-size: 108%;
-      background-position-x: 15px;
+      background-image: url("../img/index/main-products/zigzag-fill-desktop.svg");
     }
   }
 
@@ -214,22 +263,9 @@
     @include font-face(700, 53px, 57px);
   }
 
-  .main-products__image {
-    margin-bottom: -121px;
-    min-height: 746px;
-    min-width: 1150px;
-  }
-
-  .main-products__image img {
-    width: 100%;
-    height: 100%;
-  }
-
   .main-products__categories-inner {
     flex-direction: row;
-    padding-left: 50px;
-    padding-right: 50px;
-    max-width: 1200px;
+    max-width: 1250px;
     margin: 0 auto;
   }
 

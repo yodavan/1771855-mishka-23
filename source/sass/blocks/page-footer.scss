@@ -5,23 +5,21 @@
 .page-footer__wrapper {
   min-height: 160px;
   margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .page-footer__logo {
   display: none;
 }
 
-.page-footer__list {
-  min-height: 80px;
-}
-
 .page-footer__developer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  min-height: 80px;
   margin: 0;
-  padding: 0;
+  padding: 22px 0 12px;
 
   @include font-face(700, 19px, 18px);
   color: $black;
@@ -30,6 +28,7 @@
 .page-footer__link {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
   text-decoration: none;
   color: $black;
 
@@ -91,6 +90,8 @@
   }
 
   .page-footer__developer {
+    justify-content: flex-end;
+
     @include font-face(700, 19px, 18px);
     color: $black;
   }
