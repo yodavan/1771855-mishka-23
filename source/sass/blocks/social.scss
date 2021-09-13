@@ -1,13 +1,16 @@
 .social {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 0;
+  padding: 23px 0 13px;
+  border-bottom: 1px solid $n-gray;
 }
 
 .social__item {
   margin-right: 41px;
+  margin-bottom: 10px;
   list-style: none;
 
   &:last-child {
@@ -40,4 +43,11 @@
 .social__link--twitter {
   width: 25px;
   height: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    border-bottom: none;
+    margin: 0 35px;
+  }
 }

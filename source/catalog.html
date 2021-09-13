@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/152.png" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Каталог товаров | Мишка</title>
   </head>
@@ -213,7 +218,7 @@
           </li>
         </ul>
         <p class="page-footer__developer">
-          <a class="page-footer__link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Разработано HTML Academy">
+          <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Разработано HTML Academy">
             Разработано
             <svg class="page-footer__icon-htmlacademy" width="27" height="34">
               <use xlink:href="img/sprite.svg#htmlacademy"></use>
@@ -222,7 +227,7 @@
         </p>
       </div>
     </footer>
-    <section class="modal modal--closed">
+    <section class="modal modal--catalog modal--closed">
       <h3 class="modal__title">Добавить в корзину</h3>
       <p class="modal__text">Выберите размер:</p>
       <form class="modal__form" action="https://echo.htmlacademy.ru" method="POST">
@@ -240,7 +245,7 @@
             <label class="modal__label" for="modal_size_large" aria-label="Размер: Большой">L</label>
           </li>
         </ul>
-        <button class="modal__button">Добавить</button>
+        <button class="modal__button" type="button">Добавить</button>
       </form>
     </section>
     <script src="js/script.min.js"></script>

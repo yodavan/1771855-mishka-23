@@ -4,7 +4,7 @@
 
 .production__wrapper {
   margin: 0 auto;
-  padding: 0 30px 58px;
+  padding: 0 30px 59px;
   max-width: 365px;
 }
 
@@ -20,17 +20,16 @@
 
 .production__product-video {
   min-width: 258px;
-  min-height: 503px;
 }
 
 @media (min-width: $tablet-width) {
   .production__wrapper {
-    padding: 0 50px 60px;
+    padding: 0 50px 62px;
     min-width: 668px;
   }
 }
 
-@media (min-width: $desctop-width) {
+@media (min-width: $desktop-width) {
   .production__wrapper {
     padding-bottom: 101px;
     min-width: 1050px;

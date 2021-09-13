@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/152.png" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Интернет Магазин: Мишка</title>
   </head>
@@ -68,13 +73,6 @@
       <section class="main-products">
         <div class="main-products__wrapper">
           <h1 class="main-products__title-bold">Милые штуки ручной<br> работы для дома</h1>
-          <div class="main-products__image">
-            <picture>
-              <source media="(min-width: 1150px)" srcset="img/index/main-products/hero-desktop.jpg 1x, img/index/main-products/hero-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/index/main-products/hero-tablet.jpg 1x, img/index/main-products/hero-tablet@2x.jpg 2x">
-              <img src="img/index/main-products/main-products_mobile.jpg" srcset="img/index/main-products/main-products_mobile@2x.jpg 2x" alt="Деревянная полочка в виде домика в 3 яруса. На полках лежат мягкие игрушки, кот и мишка, а так же вязанные карзинки" width="320" height="373">
-            </picture>
-          </div>
           <div class="main-products__categories-inner">
             <a class="main-products__categories main-products__categories--interior" href="#"><span>Предметы<br> интерьера</span></a>
             <a class="main-products__categories main-products__categories--toy" href="#"><span>Детские<br> игрушки</span></a>
@@ -110,7 +108,7 @@
             </picture>
           </div>
           <p class="promo__price">Цена: 990 руб.</p>
-          <a class="promo__button-link button-link" href="#">Заказать</a>
+          <button type="button" class="promo__button-link button-link">Заказать</button>
         </div>
       </section>
       <section class="about">
@@ -151,15 +149,15 @@
               <span class="reviews__nick-name">@misssssiskras</span>
             </blockquote>
           </div>
-          <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle toggle-left" type="button" aria-label="Предыдущий слайд">
+          <p class="reviews__toggles">
+            <button class="reviews__toggle-left" type="button" aria-label="Предыдущий слайд">
               <img src="img/index/reviews/huge-left.svg" alt="Стрелка в лево" width="50" height="26">
             </button>
-            <button class="slider__toggle toggle-right" type="button" aria-label="Следующий слайд">
+            <button class="reviews__toggle-right" type="button" aria-label="Следующий слайд">
               <img src="img/index/reviews/huge-right.svg" alt="Стрелка в право" width="50" height="26">
             </button>
           </p>
-          <a class="reviews__button-link button-link" href="#">Написать</a>
+          <a class="reviews__button-link button-link" href="blank.html">Написать</a>
         </div>
       </section>
       <section class="contacts">
@@ -178,6 +176,7 @@
             </div>
           </dl>
           <div class="contacts__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d845.1718369482774!2d30.32308456096939!3d59.9389284047164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fcb29834b%3A0xb96655f87fd82737!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE1LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2ses!4v1631480590757!5m2!1sru!2ses" width="320" height="454" allowfullscreen="" loading="lazy"></iframe>
             <picture>
               <source media="(min-width: 1150px)" srcset="img/index/contacts/map-desktop.jpg 1x, img/index/contacts/map-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/index/contacts/map-tablet.jpg 1x, img/index/contacts/map-tablet@2x.jpg 2x">
@@ -219,7 +218,7 @@
           </li>
         </ul>
         <p class="page-footer__developer">
-          <a class="page-footer__link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Разработано HTML Academy">
+          <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Разработано HTML Academy">
             Разработано
             <svg class="page-footer__icon-htmlacademy" width="27" height="34">
               <use xlink:href="img/sprite.svg#htmlacademy"></use>
@@ -228,7 +227,7 @@
         </p>
       </div>
     </footer>
-    <section class="modal modal--closed">
+    <section class="modal modal--index modal--closed">
       <h3 class="modal__title">Добавить в корзину</h3>
       <p class="modal__text">Выберите размер:</p>
       <form class="modal__form" action="https://echo.htmlacademy.ru" method="POST">
@@ -246,7 +245,7 @@
             <label class="modal__label" for="modal_size_large" aria-label="Размер: Большой">L</label>
           </li>
         </ul>
-        <button class="modal__button">Добавить</button>
+        <button class="modal__button" type="button">Добавить</button>
       </form>
     </section>
     <script src="js/script.min.js"></script>

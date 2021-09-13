@@ -18,14 +18,17 @@
 }
 
 @media (max-width: $mobile-width-only) {
-  .main-nav--closed .main-nav__dropdown::before {
-    content: "";
-    position: absolute;
-    top: 32px;
-    right: 30px;
-    width: 21px;
-    height: 14px;
-    background-image: url("../img/header/burger-menu.svg");
+  .main-nav--closed .main-nav__dropdown {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 32px;
+      right: 30px;
+      width: 21px;
+      height: 14px;
+      background-image: url("../img/header/burger-menu.svg");
+      background-repeat: no-repeat;
+    }
   }
 
   .main-nav--closed .main-nav__list {
@@ -85,7 +88,6 @@
   .main-nav__wrapper {
     display: flex;
     flex-direction: column-reverse;
-    max-width: 900px;
     min-height: 89px;
     padding: 0 50px;
     margin: 0 auto;
@@ -96,11 +98,11 @@
   }
 }
 
-@media (min-width: $desctop-width) {
+@media (min-width: $desktop-width) {
   .main-nav__wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 1300px;
+    max-width: 1250px;
   }
 }
