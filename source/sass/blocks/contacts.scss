@@ -235,7 +235,7 @@
   }
 
   .contacts__value a {
-    ::before {
+    &::before {
       bottom: -9px;
     }
   }
