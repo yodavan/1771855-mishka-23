@@ -158,8 +158,7 @@
       width: 100%;
       height: 14px;
       background-image: url("../img/index/main-products/zigzag-fill-tablet.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-repeat: repeat;
 
       @media (min-width: $tablet_top-width) {
         height: 17px;
@@ -250,8 +249,9 @@
     }
 
     &::after {
-      height: 20px;
-      background-image: url("../img/index/main-products/zigzag-fill-desktop.svg");
+      min-height: 20px;
+      background-image: url("../img/index/main-products/zigzag-desktop.svg");
+      background-position-x: 12px;
     }
   }
 
