@@ -200,7 +200,7 @@
 @media (min-width: $desktop-width) {
   .contacts__wrapper {
     grid-template-columns: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
-    grid-template-rows: auto auto 52px;
+    grid-template-rows: auto auto min-content;
     padding: 75px 50px 104px;
     min-width: 1050px;
 
@@ -214,7 +214,7 @@
     grid-column: 2 / 4;
     grid-row: 1 / 2;
     margin-top: 82px;
-    margin-bottom: 29px;
+    margin-bottom: 35px;
 
     @include font-face(700, 53px, 57px);
     color: $black;
@@ -226,7 +226,7 @@
     display: flex;
     flex-direction: column;
     margin: 0;
-    margin-bottom: 45px;
+    margin-bottom: 53px;
   }
 
   .contacts__value {

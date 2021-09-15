@@ -4,6 +4,10 @@
 
 .main-products__wrapper {
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   min-height: 489px;
   margin: 0 auto;
   border-top: 1px solid $o-black;
@@ -12,11 +16,12 @@
   &::before {
     content: "";
     position: absolute;
-    width: 320px;
-    height: 373px;
     top: 0;
     left: 50%;
+    z-index: 1;
     transform: translate(-50%);
+    width: 320px;
+    height: 373px;
     background-image: url("../img/index/main-products/main-products_mobile.jpg");
     background-repeat: no-repeat;
     background-position: 0 -18px;
@@ -30,13 +35,9 @@
 }
 
 .main-products__title-bold {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%);
-  margin: 0;
+  z-index: 2;
+  margin: 72px 30px 80px;
   padding: 0;
-  min-width: 265px;
   max-width: 365px;
   min-height: 90px;
 
@@ -46,12 +47,10 @@
 }
 
 .main-products__categories-inner {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: -90px;
+  z-index: 2;
+  width: 100%;
 }
 
 .main-products__categories {
@@ -65,7 +64,7 @@
   & span {
     display: block;
     min-width: 130px;
-    margin: 23px 100px 10px 30px;
+    margin: 23px 100px 20px 30px;
   }
 }
 
@@ -155,6 +154,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
+      z-index: 3;
       width: 100%;
       height: 14px;
       background-image: url("../img/index/main-products/zigzag-fill-tablet.svg");
@@ -167,7 +167,7 @@
   }
 
   .main-products__title-bold {
-    top: 155px;
+    margin-top: 156px;
     min-width: 668px;
     min-height: 100px;
     padding-left: 50px;
@@ -177,17 +177,14 @@
   }
 
   .main-products__categories-inner {
-    bottom: 1px;
-    left: 50%;
-    transform: translate(-50%);
     flex-direction: row;
     align-items: flex-end;
-    height: 124px;
+    margin-bottom: 1px;
+    min-height: 130px;
   }
 
   .main-products__categories {
-    width: 100%;
-    height: 119px;
+    min-height: 119px;
 
     @include font-face(700, 20px, 30px);
 
@@ -206,7 +203,7 @@
     }
 
     &:hover {
-      height: 124px;
+      min-height: 124px;
 
       span {
         margin-top: 21px;
@@ -266,7 +263,6 @@
   .main-products__categories-inner {
     flex-direction: row;
     max-width: 1150px;
-    margin: 0 auto;
   }
 
   .main-products__categories {

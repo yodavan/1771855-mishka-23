@@ -246,6 +246,10 @@
     margin-bottom: 0;
   }
 
+  .reviews__item {
+    margin-bottom: 105px;
+  }
+
   .reviews__text {
     margin-bottom: 41px;
   }
@@ -268,10 +272,10 @@
 
   .reviews__toggles {
     grid-column: -1 / -2;
-    align-self: center;
+    align-self: end;
     justify-content: space-between;
-    padding-top: 25px;
     margin: 0;
+    margin-bottom: 119px;
     height: 26px;
   }
 
@@ -284,7 +288,6 @@
     grid-column: -3 / -1;
     justify-self: end;
     margin-top: 70px;
-    max-height: 45px;
 
     @include font-face(700, 17px, 20px);
   }
